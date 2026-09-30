@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-30",
+  "trip": {
+    "arrival": "2026-12-29",
+    "departure": "2027-01-26",
+    "nights": 28,
+    "adults": 4,
+    "childrenAges": [1, 10],
+    "lodgingBudgetEUR": 5000,
+    "priceStatus": "unknown",
+    "priceDisplay": "Цена на наши даты пока не получена",
+    "priceNote": "Нужен итог за 28 ночей для 4 взрослых и детей 1 и 10 лет: выбранные категории и число номеров, налоги, питание, доплаты и отмена. Цены «от» на других датах не использованы. Поиск не включал бронирование или обращения в отели."
+  },
+  "editorialRules": [
+    "Неизвестно и нет — разные значения. Отсутствие услуги в прочитанной карточке не доказывает её отсутствие.",
+    "Звёзды ниже — категория в Trip.com, а не оценка гостей и не заявление о действующей государственной сертификации.",
+    "Дорога из SYX — ориентир до конкретного объекта из FAQ Trip.com с явным указанием поездки на машине. Это не наш расчёт навигации и не прогноз трафика в день прилёта. Не включает получение багажа, ожидание машины или остановки.",
+    "Trip.com одновременно выводит другие значения Distance to Airport без ясного способа расчёта. Для сравнения взяты только явно автомобильные значения FAQ.",
+    "Кухня привязана к категории номера; её наличие нельзя распространять на все номера объекта. Размещение нашей семьи и доступность категории на даты остаются отдельными вопросами.",
+    "Рекламное упоминание водных развлечений или даже windsurfing не подтверждает самостоятельный прокат доски с парусом, пригодного для опытного райдера.",
+    "Источник проверен 30.09.2026. Доступность и состояние услуг в январе 2027 не гарантируются."
+  ],
+  "properties": [
+    {
+      "slug": "oakwood-sanya",
+      "name": "Oakwood Apartments Sanya",
+      "bay": "sanya-bay",
+      "type": "apartments",
+      "address": "No. 118 Huixin Road, Tianya District, Sanya, Hainan, China",
+      "identitySource": "oakwood-official",
+      "stars": {"value": 5, "status": "platform_classification", "display": "5★ по Trip.com", "source": "oakwood-trip"},
+      "airport": {
+        "status": "platform_estimate",
+        "roadKm": 10.1,
+        "driveMinutes": 16,
+        "display": "≈10 км · около 16 минут на машине",
+        "note": "Оценка Trip.com; время зависит от маршрута и пробок.",
+        "source": "oakwood-trip-route"
+      },
+      "room": {
+        "status": "operator_confirmed_category",
+        "name": "Three-Bedroom Deluxe Sea View",
+        "display": "Апартаменты с тремя спальнями · 218 м²",
+        "occupancy": "Оператор указывает до 6 гостей; седьмой — за доплату. Условия для нашей семьи и наличие на даты нужно подтвердить.",
+        "source": "oakwood-three-bedroom"
+      },
+      "kitchen": {
+        "status": "yes_in_named_category",
+        "display": "Полноценная кухня в апартаментах с тремя спальнями",
+        "note": "В категории указаны духовка, микроволновка, холодильник и стирально-сушильная машина.",
+        "source": "oakwood-three-bedroom"
+      },
+      "beach": {
+        "status": "secondary_description",
+        "display": "Около 1 км до общественного пляжа; есть переход через дорогу",
+        "walkMinutes": null,
+        "note": "По описанию туроператора KOMPAS. Точный пеший путь с коляской и расписание заявленного шаттла ещё не проверены.",
+        "source": "oakwood-kompas"
+      },
+      "family": {
+        "status": "operator_listed",
+        "display": "Детская игровая зона; кроватка по запросу",
+        "note": "Игровая зона указана на сайте оператора, кроватка — в выбранной категории. Подходящие возрастам занятия не подтверждены.",
+        "sources": ["oakwood-official", "oakwood-three-bedroom"]
+      },
+      "heatedPool": {
+        "status": "listed_operation_unconfirmed",
+        "display": "Подогрев указан в Trip.com; работу в январе уточняю",
+        "note": "Оператор подтверждает бассейн, но его зимняя температура и график отдельно не подтверждены.",
+        "sources": ["oakwood-trip", "oakwood-official"]
+      },
+      "windsurf": {
+        "status": "unknown",
+        "display": "Прокат доски с парусом не подтверждён",
+        "note": "У прочитанных источников нет подтверждения самостоятельного проката комплекта у отеля."
+      },
+      "price": {"status": "unknown", "display": "Цена за 28 ночей для нашей семьи пока неизвестна"}
+    },
+    {
+      "slug": "coconut-sea-time",
+      "name": "Sanya Coconut Sea Time Sea View Holiday Apartment",
+      "bay": "dadonghai",
+      "type": "apartments",
+      "address": "Unit F, 2F, Building 2, Jinling Seaview Garden, No. 19 Haiyun Road, Jiyang District, Sanya, China",
+      "identitySource": "coconut-trip",
+      "stars": {"value": 2, "status": "platform_classification", "display": "2★ по Trip.com", "source": "coconut-trip"},
+      "airport": {
+        "status": "platform_estimate",
+        "roadKm": 17.8,
+        "driveMinutes": 43,
+        "display": "≈18 км · около 43 минут на машине",
+        "note": "Оценка Trip.com; время зависит от маршрута и пробок.",
+        "source": "coconut-trip-route"
+      },
+      "room": {
+        "status": "platform_listed_category",
+        "name": "Suite - 3-Bedroom, 2-Living Room, Sea-View",
+        "display": "Апартаменты с тремя спальнями и двумя гостиными · 160 м²",
+        "occupancy": "В Trip.com перечислены две кровати queen и одна double. Допустимый состав 4 взрослых + 2 детей и конкретную квартиру ещё нужно подтвердить.",
+        "source": "coconut-trip"
+      },
+      "kitchen": {
+        "status": "category_match_unconfirmed",
+        "display": "Кухня заявлена в отдельных апартаментах; выбранную квартиру уточняю",
+        "note": "Agoda явно указывает мини-кухню и посуду у категории с одной спальней и видом на сад. Переносить это на трёхспальную квартиру без подтверждения нельзя.",
+        "source": "coconut-agoda"
+      },
+      "beach": {
+        "status": "platform_description",
+        "display": "Около 3 минут пешком до моря по описанию объекта",
+        "walkMinutes": 3,
+        "note": "В китайском описании Trip.com указано менее 200 м. Реальный выход из выбранной квартиры и путь с коляской ещё нужно проверить.",
+        "source": "coconut-trip-description"
+      },
+      "family": {
+        "status": "platform_listed",
+        "display": "Бассейн в комплексе; детские услуги уточняю",
+        "note": "Наличие бассейна указано в Trip.com. Кроватка и подходящие возрастам занятия не подтверждены.",
+        "source": "coconut-trip"
+      },
+      "heatedPool": {
+        "status": "unknown",
+        "display": "Подогрев бассейна не подтверждён",
+        "note": "Упоминание бассейна само по себе не говорит о подогреве."
+      },
+      "windsurf": {
+        "status": "unknown",
+        "display": "Прокат доски с парусом не подтверждён",
+        "note": "Близость водного спортивного парка не подтверждает доступность нужного комплекта."
+      },
+      "price": {"status": "unknown", "display": "Цена за 28 ночей для нашей семьи пока неизвестна"}
+    },
+    {
+      "slug": "horizon-yalong-bay",
+      "name": "Horizon Resort & Spa Yalong Bay",
+      "bay": "yalong-bay",
+      "type": "hotels",
+      "address": "Yalong Bay National Resort District, Sanya, Hainan, China",
+      "identitySource": "horizon-trip",
+      "stars": {"value": 5, "status": "platform_classification", "display": "5★ по Trip.com", "source": "horizon-trip"},
+      "airport": {
+        "status": "platform_estimate",
+        "roadKm": 30.5,
+        "driveMinutes": 50,
+        "display": "≈31 км · около 50 минут на машине",
+        "note": "Оценка Trip.com; время зависит от маршрута и пробок.",
+        "source": "horizon-trip"
+      },
+      "room": {
+        "status": "platform_listed_category",
+        "name": "Zone 2 Forest Family Suite With Two-Bedrooms",
+        "display": "Семейный люкс с двумя спальнями, корпус 2 · 120–130 м²",
+        "occupancy": "Заявлены две кровати king. Вместимость всей нашей семьи и потребность во втором номере пока не подтверждены.",
+        "source": "horizon-trip"
+      },
+      "kitchen": {
+        "status": "platform_listed_in_named_category",
+        "display": "Мини-кухня в выбранном семейном люксе",
+        "note": "Указана в названии категории Trip.com. Плиту, посуду и правила приготовления уточняю.",
+        "source": "horizon-trip"
+      },
+      "beach": {
+        "status": "platform_description",
+        "display": "Первая линия; около 5 минут пешком до пляжа",
+        "walkMinutes": 5,
+        "note": "По описанию Booking.com. Время от конкретного корпуса и маршрут с коляской нужно проверить.",
+        "source": "horizon-booking"
+      },
+      "family": {
+        "status": "platform_listed",
+        "display": "Детский клуб, площадка и детский бассейн",
+        "note": "Перечислены в Trip.com. Возрастные ограничения, участие взрослых и включение в тариф нужно уточнить.",
+        "source": "horizon-trip"
+      },
+      "heatedPool": {
+        "status": "temporarily_closed_in_listing",
+        "display": "Крытый бассейн с подогревом отмечен как временно закрытый",
+        "note": "Такой статус отображался в Trip.com при проверке. Открытие и работу в январе 2027 отель ещё не подтвердил.",
+        "source": "horizon-trip"
+      },
+      "windsurf": {
+        "status": "rental_unconfirmed",
+        "display": "Виндсёрфинг упоминается; самостоятельный прокат не подтверждён",
+        "note": "В сторонних перечнях услуг есть windsurfing, но нет актуальных условий аренды доски с парусом или сведений о комплекте.",
+        "source": "horizon-windsurf-listing"
+      },
+      "price": {"status": "unknown", "display": "Цена за 28 ночей для нашей семьи пока неизвестна"}
+    },
+    {
+      "slug": "argyle-yalong-bay",
+      "name": "Argyle Resort Yalong Bay Sanya",
+      "bay": "yalong-bay",
+      "type": "hotels",
+      "address": "No. 9 Longxi Road, Yalong Bay, Jiyang District, Sanya, Hainan, China",
+      "identitySource": "argyle-trip",
+      "stars": {"value": 5, "status": "platform_classification", "display": "5★ по Trip.com", "source": "argyle-trip"},
+      "airport": {
+        "status": "platform_estimate",
+        "roadKm": 28.6,
+        "driveMinutes": 46,
+        "display": "≈29 км · около 46 минут на машине",
+        "note": "Оценка Trip.com; время зависит от маршрута и пробок.",
+        "source": "argyle-trip-route"
+      },
+      "room": {
+        "status": "platform_listed_category",
+        "name": "雅閣兩房一廳家庭套房（簡單廚房）",
+        "display": "Семейный люкс с двумя спальнями и гостиной · 75 м²",
+        "occupancy": "Заявлены две кровати queen. Вместимость всей семьи нужно подтвердить; также перечислены трёхспальные виллы с кухней.",
+        "source": "argyle-trip"
+      },
+      "kitchen": {
+        "status": "platform_listed_in_named_category",
+        "display": "Небольшая кухня в выбранном семейном люксе",
+        "note": "В названии категории Trip.com указана простая кухня; из техники видны холодильник и рисоварка. Плиту, посуду и правила готовки уточняю.",
+        "source": "argyle-trip"
+      },
+      "beach": {
+        "status": "guest_report_only",
+        "display": "До пляжа нужна поездка; гости упоминают шаттл",
+        "walkMinutes": null,
+        "note": "В отзывах Trip.com описан трансфер к пляжу. Актуальное расписание и пеший путь не подтверждены.",
+        "source": "argyle-trip-route"
+      },
+      "family": {
+        "status": "platform_listed",
+        "display": "Открытый бассейн; занятия для детей уточняю",
+        "note": "Бассейн указан в карточке. Наличие подходящего клуба для детей 1 и 10 лет не подтверждено.",
+        "source": "argyle-trip"
+      },
+      "heatedPool": {
+        "status": "unknown",
+        "display": "Подогрев плавательного бассейна не подтверждён",
+        "note": "Указанные в карточке горячие купели нельзя автоматически считать подогреваемым бассейном для плавания.",
+        "source": "argyle-trip-route"
+      },
+      "windsurf": {
+        "status": "unknown",
+        "display": "Прокат доски с парусом не подтверждён",
+        "note": "Нужен отдельный ответ клуба о самостоятельной аренде и конкретном оборудовании."
+      },
+      "price": {"status": "unknown", "display": "Цена за 28 ночей для нашей семьи пока неизвестна"}
+    }
+  ],
+  "sources": [
+    {"id": "oakwood-official", "title": "Oakwood / Ascott — официальный сайт объекта", "url": "https://www.discoverasr.com/en/oakwood/china/oakwood-apartments-sanya", "kind": "primary_operator", "evidence": "Адрес 118 Huixin Road; студии и апартаменты до трёх спален; игровая зона, кухня и бассейн. Категория с тремя спальнями — 218 м²."},
+    {"id": "oakwood-three-bedroom", "title": "Oakwood — апартаменты с тремя спальнями", "url": "https://www.discoverasr.com/en/oakwood/china/oakwood-apartments-sanya/three-bedroom-ocean-view", "kind": "primary_operator_room", "evidence": "Именованная категория с тремя спальнями: до 6 гостей, 7-й за доплату; две кровати king и twin. Кухня, духовка, микроволновка, холодильник, стирально-сушильная машина, кроватка по запросу."},
+    {"id": "oakwood-trip", "title": "Trip.com — Oakwood: категория и услуги", "url": "https://www.trip.com/hotels/sanya-hotel-detail-38230215/hotel/?locale=en-US", "kind": "third_party_booking_platform", "evidence": "Платформа обозначает объект как 5-звёздочный и показывает подогреваемый бассейн. Это отдельные данные от оценки гостей."},
+    {"id": "oakwood-trip-route", "title": "Trip.com — Oakwood: поездка из SYX", "url": "https://www.trip.com/hotels/sanya-hotel-detail-38230215/aozhuo-yaju-apartment-hotel/", "kind": "third_party_booking_platform_route_estimate", "evidence": "FAQ явно указывает машину: 10,1 км и примерно 16 минут. Нижняя сводка отдельно показывает 8,67 км без ясного метода; она не использована для дороги."},
+    {"id": "oakwood-kompas", "title": "KOMPAS — описание Oakwood", "url": "https://kompastour.com/kz/rus/country/china/hainan/oakwood_apartment_sanya/", "kind": "third_party_tour_operator", "evidence": "В разделе о пляже: общественный пляж, 1 км, переход через дорогу; упоминается шаттл по запросу."},
+    {"id": "coconut-trip", "title": "Trip.com — Coconut Sea Time: категории и услуги", "url": "https://www.trip.com/hotels/sanya-hotel-detail-1252444/sanya-coconut-sea-time-sea-view-holiday-apartment/", "kind": "third_party_booking_platform", "evidence": "Точный адрес и идентичность объекта; категория платформы 2★; бассейн. Перечислены трёхспальные апартаменты с двумя гостиными, 160 м², двумя queen и одной double."},
+    {"id": "coconut-trip-route", "title": "Trip.com — Coconut Sea Time: поездка из SYX", "url": "https://in.trip.com/hotels/sanya-hotel-detail-1252444/sanya-coconut-sea-time-sea-view-holiday-apartment/", "kind": "third_party_booking_platform_route_estimate", "evidence": "FAQ указывает примерно 43 минуты на машине, 17,8 км. Иное число 16,39 км в сводке не трактуется как автомобильный маршрут."},
+    {"id": "coconut-trip-description", "title": "Trip.com — Coconut Sea Time: описание на китайском", "url": "https://tw.trip.com/hotels/sanya-hotel-detail-1252444/sanya-coconut-sea-time-sea-view-holiday-apartment/", "kind": "third_party_booking_platform_property_description", "evidence": "Описание объекта заявляет менее 200 м и три минуты пешком до моря. Это рекламный ориентир, не проверенный маршрут от выбранной квартиры."},
+    {"id": "coconut-agoda", "title": "Agoda — Coconut Sea Time: оснащение категории", "url": "https://www.agoda.com/en-au/sanya-coconut-sea-time-sea-view-holiday-apartment/hotel/sanya-cn.html", "kind": "third_party_booking_platform_room", "evidence": "Категория с одной спальней и видом на сад, 75 м²: мини-кухня, посуда и холодильник. Соответствие выбранной трёхспальной квартире не установлено."},
+    {"id": "horizon-trip", "title": "Trip.com — Horizon: дорога, категории и услуги", "url": "https://www.trip.com/hotels/sanya-hotel-detail-345522/horizon-sanya-yalong-bay-resort-and-spa/", "kind": "third_party_booking_platform", "evidence": "Категория платформы 5★; FAQ: машина 30,5 км, около 50 минут. Двухспальный лесной семейный люкс корпуса 2, 120–130 м², две king, мини-кухня. Детский клуб, площадка, детский бассейн. Крытый бассейн с подогревом помечен временно закрытым; январский график неизвестен."},
+    {"id": "horizon-booking", "title": "Booking.com — Horizon: расположение у пляжа", "url": "https://www.booking.com/hotel/cn/horizon-resort-spa.en-gb.html", "kind": "third_party_booking_platform_description", "evidence": "Описание первой линии и пяти минут пешком до пляжа Ялунвань. Упомянуты кухни в части семейных номеров."},
+    {"id": "horizon-windsurf-listing", "title": "KKday — Horizon: перечень спортивных услуг", "url": "https://www.kkday.com/en-my/product/374300", "kind": "third_party_booking_platform_amenity_list", "evidence": "Windsurfing присутствует в общем перечне спорта. Условия самостоятельного проката, оборудование и сезон работы не указаны."},
+    {"id": "argyle-trip", "title": "Trip.com — Argyle: категории и услуги", "url": "https://hk.trip.com/hotels/yalong-bay-hotel-detail-14074913/argyle-resort-sanya/", "kind": "third_party_booking_platform", "evidence": "Адрес 9 Longxi Road, категория платформы 5★. Двухспальный семейный люкс с простой кухней, 75 м², две queen, холодильник и рисоварка. Есть также трёхспальные виллы с кухней. Открытый бассейн."},
+    {"id": "argyle-trip-route", "title": "Trip.com — Argyle: дорога и отзывы о пляже", "url": "https://www.trip.com/hotels/yalong-bay-hotel-detail-14074913/argyle-resort-yalong-bay-sanya/", "kind": "third_party_booking_platform_and_guest_reports", "evidence": "FAQ: около 46 минут на машине, 28,6 км от SYX. Отзывы упоминают шаттл к пляжу и поездку. Карточка отдельно перечисляет купели; это не доказывает подогрев плавательного бассейна."}
+  ],
+  "researchLimitations": [
+    "Официальный сайт Horizon horizonsanya.com и каталог группы Argyle argylehotels.com не удалось прочитать в этой проверке. Их услуги не выданы за подтверждённые оператором.",
+    "Сайты horizonsanya.cn, oakwoodsanya.cn и argyleresortsanya.argyles.cn не использованы как официальные: слово official в заголовке не доказывает принадлежность отелю.",
+    "Для Horizon найдена историческая запись 2015 года в государственном списке пятизвёздочных отелей, но она не доказывает текущую сертификацию. Поэтому отображение звёзд единообразно атрибутировано Trip.com.",
+    "Оценки дороги у разных платформ расходятся. Например, Klook выводит существенно меньшие времена. Не смешиваем их с автомобильными FAQ Trip.com и не показываем значение как обещание трансфера.",
+    "Полноценный тариф на наши даты и состав не получен. Доступность номера, размер депозита, стоимость отмены и питание не подтверждены.",
+    "Для Coconut Sea Time нет первичного подтверждения кухни именно выбранной трёхспальной квартиры. Для Horizon и Argyle есть названные категории с мини-кухней, но не полный перечень оборудования."
+  ]
+}

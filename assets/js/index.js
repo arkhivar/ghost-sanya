@@ -2,6 +2,7 @@ import "../css/index.css";
 import initAtlasMap from "./atlas-map.js";
 import initDesktopGate from "./desktop-gate.js";
 import initJanuary from "./january.js";
+import initStayComparison from "./stay-comparison.js";
 
 const areas = {
     "sanya-bay": {
@@ -459,6 +460,17 @@ function initSaved() {
     const savedFilter = section.querySelector("[data-stay-saved]");
     const empty = section.querySelector(".stay-empty");
     const results = section.querySelector("[data-stay-results]");
+    const comparison = initStayComparison({
+        section,
+        onRemove(slug) {
+            saved.delete(slug);
+            const persisted = storage.set("saved", [...saved]);
+            render();
+            notice.textContent = persisted
+                ? "Вариант убран из сравнения."
+                : "Выбор обновлён. Сохранение после закрытия страницы недоступно.";
+        },
+    });
     function render() {
         document.getElementById("saved-count").textContent = saved.size;
         document.querySelectorAll("[data-save]").forEach((button) => {
@@ -468,11 +480,11 @@ function initSaved() {
                 ? "✓"
                 : "+";
             button.querySelector(".save-text").textContent = active
-                ? "В списке"
-                : "В список";
+                ? "Выбрано"
+                : "К сравнению";
             button.setAttribute(
                 "aria-label",
-                (active ? "Убрать из списка " : "Сохранить ") +
+                (active ? "Убрать из сравнения " : "Добавить к сравнению ") +
                     button.closest("[data-stay]").querySelector("h3")
                         .textContent.trim(),
             );
@@ -504,18 +516,23 @@ function initSaved() {
         if (!visible) {
             empty.querySelector("[data-stay-empty-text]").textContent =
                 savedOnly && !saved.size
-                    ? "Ваш список пока пуст. Нажмите «В список» у вариантов, к которым хочется вернуться."
+                    ? "Пока ничего не выбрано. Нажмите «К сравнению» у двух–четырёх вариантов жилья."
                     : savedOnly
-                        ? "В вашем списке пока нет жилья с такими условиями. Попробуйте другую бухту или тип жилья."
+                        ? "Среди выбранных вариантов нет жилья с такими условиями. Попробуйте другую бухту или тип жилья."
                         : bay === "haitang-bay"
                             ? "Для Хайтанваня пока нет вариантов с такими условиями в этой подборке. Можно выбрать другую бухту."
                             : "В этой подборке пока нет жилья с таким сочетанием бухты и типа. Попробуйте изменить фильтры.";
         }
+        comparison.update([...saved]);
     }
     document.querySelectorAll("[data-save]").forEach((button) =>
         button.addEventListener("click", () => {
             const slug = button.dataset.save;
             const remove = saved.has(slug);
+            if (!remove && saved.size >= 4) {
+                notice.textContent = "Для одной таблицы можно выбрать до четырёх мест. Уберите один из выбранных вариантов, чтобы добавить другой.";
+                return;
+            }
             if (remove) saved.delete(slug);
             else saved.add(slug);
             const persisted = storage.set("saved", [...saved]);
@@ -523,9 +540,9 @@ function initSaved() {
             if (button.closest("[data-stay]").hidden) savedFilter.focus({ preventScroll: true });
             notice.textContent = persisted
                 ? remove
-                    ? "Вариант убран из вашего списка."
-                    : "Сохранено в вашем списке в этом браузере."
-                : "Список обновлён. В этом браузере сохранение после закрытия недоступно.";
+                    ? "Вариант убран из сравнения."
+                    : "Вариант добавлен к сравнению. Выбор сохранён в этом браузере."
+                : "Выбор обновлён. В этом браузере сохранение после закрытия недоступно.";
         }),
     );
     document.querySelectorAll("[data-stay-filter]").forEach((button) =>

@@ -11,24 +11,12 @@
                 {{#match slug "hotels"}}<span class="eyebrow">{{name}}</span>{{/match}}
             {{/foreach}}
         </div>
-        <h3><a href="{{url}}">{{#match slug "oakwood-sanya"}}Oakwood Apartments{{else match slug "coconut-sea-time"}}Coconut Sea Time{{else match slug "horizon-yalong-bay"}}Horizon Resort{{else match slug "argyle-yalong-bay"}}Argyle Resort{{else}}{{title}}{{/match}}</a></h3>
-        <p>{{#match slug "oakwood-sanya"}}Кухня и сервис для длинного проживания.{{else match slug "coconut-sea-time"}}Проверить идею своего дома рядом с морем.{{else match slug "horizon-yalong-bay"}}Семейный пляжный сценарий из исследования.{{else match slug "argyle-yalong-bay"}}Один из первых вариантов, предложенных семьёй.{{else}}{{#if custom_excerpt}}{{custom_excerpt}}{{else}}{{excerpt words="30"}}{{/if}}{{/match}}</p>
+        <h3><a href="{{url}}" data-stay-name>{{title}}</a></h3>
+        <p>{{#if custom_excerpt}}{{custom_excerpt}}{{else}}{{excerpt words="30"}}{{/if}}</p>
     </div>
-    <div class="stay-feature">
-        {{#match slug "oakwood-sanya"}}
-            <span class="status-dot confirmed"></span>Кухня указана у оператора<small>Проверить путь до пляжа</small>
-        {{else match slug "coconut-sea-time"}}
-            <span class="status-dot pending"></span>Кухня заявлена в карточке<small>Уточнить оснащение и сервис</small>
-        {{else match slug "horizon-yalong-bay"}}
-            <span class="status-dot pending"></span>Кухню и прокат уточняем<small>Цена для шестерых пока неизвестна</small>
-        {{else match slug "argyle-yalong-bay"}}
-            <span class="status-dot pending"></span>Проверить дорогу к морю<small>И возможность готовить в номере</small>
-        {{else}}
-            <span class="status-dot pending"></span>Условия ещё уточняю<small>Подробности в заметке</small>
-        {{/match}}
-    </div>
-    <button class="save-stay" type="button" data-save="{{slug}}" aria-pressed="false" aria-label="Сохранить {{title}}">
-        <span class="save-symbol">+</span><span class="save-text">В список</span>
+    <div class="stay-feature" data-stay-feature>Условия — в заметке<small>Загружаю характеристики</small></div>
+    <button class="save-stay" type="button" data-save="{{slug}}" aria-pressed="false" aria-label="Добавить к сравнению {{title}}">
+        <span class="save-symbol">+</span><span class="save-text">К сравнению</span>
     </button>
     <a class="stay-open" href="{{url}}" aria-label="Подробнее: {{title}}"><svg class="icon"><use href="#i-arrow" /></svg></a>
 </article>

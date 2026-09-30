@@ -1,0 +1,173 @@
+{
+  "checkedAt": "2026-09-30",
+  "coordinateOrder": "longitude, latitude",
+  "mapDisclosure": "Метки показывают примерное расположение объектов. Это не входы в здания и не карта для навигации.",
+  "coordinatePolicy": "Координаты относятся к конкретным объектам, не центрам бухт. Oakwood и Horizon: точки WGS84 из OpenStreetMap. Argyle: точка Amap (GCJ-02) преобразована приблизительно в WGS84. Coconut: Trip.com mapType gg трактуется как GCJ-02 на основании совпадения контрольной карточки Horizon с Amap и смещения относительно OSM; это вывод, а не объявленный Trip.com CRS. Положение Coconut преобразовано приблизительно; точный вход и конкретная квартира не проверены. Карта показывает местоположение на масштабе бухт, не пригодна для навигации.",
+  "hotels": {
+    "oakwood-sanya": {
+      "name": "Oakwood Apartments Sanya",
+      "coordinates": [
+        109.4817681,
+        18.2768934
+      ],
+      "status": "placed_approximate_property",
+      "address": "No. 118 Huixin Road, Tianya District, Sanya, Hainan, 572099, China",
+      "confidence": "high_identity_and_property_location; navigation_accuracy_not_claimed",
+      "sourceURL": "https://www.openstreetmap.org/node/12098306501",
+      "sourceKind": "community_geographic_database_corroborated_by_primary_operator",
+      "coordinateEvidence": "Direct OSM API node 12098306501 (version2, check_date2026-08-27) gives lon109.4817681 lat18.2768934; tags name:en Oakwood Apartments Sanya, address118回新路, phone+86089888880333 match operator. Operator Google-map coordinate is stored separately because it contains a China offset.",
+      "crs": "WGS84 (OpenStreetMap)",
+      "corroboration": [
+        {
+          "url": "https://www.capitaland.com/en/find-a-property/global-property-listing/lodging/oakwood-apartmentssanya.html",
+          "kind": "primary_parent_company",
+          "supports": "Same property, same No. 118 Huixin Road address. HTML entity-detail-map has latitude 18.275298 and longitude 109.485969, approximately 55 metres from the selected operator point. This is consistent at property scale, but not an exact entrance."
+        },
+        {
+          "url": "https://www.discoverasr.com.cn/oakwood/china/oakwood-apartments-sanya",
+          "kind": "primary_operator",
+          "supports": "Exact name, address118HuixinRoad and phone match OSM. Operator map raw coordinate109.485526,18.275541; interpreted as offset map data, not directly used for WGS84 atlas."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/node/12098306501.json",
+          "kind": "primary_database_api",
+          "supports": "Directly verified OSM point and identity tags on2026-09-30."
+        }
+      ],
+      "displayNote": "Примерное положение апарт-отеля по OpenStreetMap; название и адрес сверены с оператором.",
+      "originalOperatorCoordinates": [
+        109.485526,
+        18.275541
+      ],
+      "attribution": "© OpenStreetMap contributors",
+      "licenseURL": "https://www.openstreetmap.org/copyright"
+    },
+    "coconut-sea-time": {
+      "name": "Sanya Coconut Sea Time Sea View Holiday Apartment",
+      "coordinates": [
+        109.512516,
+        18.224196
+      ],
+      "status": "placed_approximate_property",
+      "address": "Unit F, 2nd Floor, Building 2, Jinling Seaview Garden, No. 19 Haiyun Road, Jiyang District, Sanya, Hainan, 572021, China",
+      "confidence": "high_listing_identity; medium_property_location; individual_apartment_and_entrance_unverified",
+      "sourceURL": "https://www.trip.com/hotels/sanya-hotel-detail-1252444/sanya-coconut-sea-time-sea-view-holiday-apartment/",
+      "sourceKind": "booking_platform_property_map",
+      "coordinateEvidence": "Property page embedded map data: mapType gg, lat 18.222499, lng 109.516597, preciseCoordinatesVisible true. Hotel id 1252444 is the exact listing in the user's original research. For display converted by inverseGCJ02 to [109.512516,18.224196]; CRS inferred from Horizon same-platform control. Exact entrance unverified.",
+      "crs": "SourceGCJ-02inferred from control comparison; displayed as approximately normalizedWGS84. CRS not explicitly declared byTrip.",
+      "corroboration": [
+        {
+          "url": "https://www.klook.com/en-PH/hotels/detail/778244-sanya-coconut-sea-time-sea-view-holiday-apartment/",
+          "kind": "booking_platform",
+          "supports": "Same full English property name and Room F, 2F, Building 2, Jinling Haijing Huayuan, No.19 Haiyun Road. Confirms listing identity, not an independent coordinate measurement."
+        }
+      ],
+      "displayNote": "Метка объекта из карточки Trip.com; конкретную квартиру и вход ещё нужно уточнить.",
+      "sourceCoordinates": [
+        109.516597,
+        18.222499
+      ]
+    },
+    "horizon-yalong-bay": {
+      "name": "Horizon Resort & Spa Yalong Bay / Resort Horizon / 天域度假酒店",
+      "coordinates": [
+        109.63799,
+        18.23158
+      ],
+      "status": "placed_approximate_property",
+      "address": "Yalong Bay Road, Yalong Bay National Resort District, Sanya, Hainan, 572000, China",
+      "confidence": "high_identity_and_property_location; polygon_reference_not_entrance",
+      "sourceURL": "https://www.openstreetmap.org/way/1336745225",
+      "sourceKind": "community_geographic_database",
+      "coordinateEvidence": "Mapcarta reports OSM way 1336745225 at latitude 18.23158, longitude 109.63799. Direct OSM API confirms name:en Resort Horizon, name:zh 天域度假酒店, tourism hotel, phone +86 898 8856 7888, street 亚龙湾路.",
+      "crs": "WGS84 (OpenStreetMap)",
+      "corroboration": [
+        {
+          "url": "https://mapcarta.com/32542346",
+          "kind": "geographic_database_renderer",
+          "supports": "Coordinates and link to the exact OSM hotel property polygon."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/1336745225.json",
+          "kind": "primary_database_api",
+          "supports": "Read on 2026-09-30 to verify property tags and phone match the hotel identity."
+        },
+        {
+          "url": "https://www.trip.com/hotels/sanya-hotel-detail-345522/horizon-sanya-yalong-bay-resort-and-spa/",
+          "kind": "booking_platform",
+          "supports": "Existing exact hotel listing from the user's research."
+        }
+      ],
+      "attribution": "© OpenStreetMap contributors",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "displayNote": "Примерное положение территории курорта по OpenStreetMap."
+    },
+    "argyle-yalong-bay": {
+      "name": "Argyle Resort Yalong Bay Sanya / 三亚亚龙湾雅阁套房度假酒店",
+      "coordinates": [
+        109.621613,
+        18.237754
+      ],
+      "status": "placed_approximate_property",
+      "address": "No. 9 Longxi Road, Yalong Bay, Jiyang District, Sanya, Hainan, China",
+      "confidence": "high_listing_identity; medium_property_location; entrance_unverified",
+      "sourceURL": "https://www.amap.com/place/B0FFI6O2UN",
+      "sourceKind": "primary_map_provider_poi",
+      "coordinateEvidence": "Amap POI B0FFI6O2UN: exact Chinese name and No9LongxiRoad; raw longitude109.625575 latitude18.235916. Amap declaresGCJ02. Approximate inverse conversion yields longitude109.621613 latitude18.237754. Trip14074913 independently identifies same name/address; its rawpoint is stored separately and is not used.",
+      "crs": "SourceGCJ-02; displayed approximately normalizedWGS84",
+      "corroboration": [
+        {
+          "url": "https://www.amap.com/place/B0FFI6O2UN",
+          "kind": "primary_map_provider_poi",
+          "supports": "Exact Chinese property name and No.9 Longxi Road address. Provider page shows latitude 18.235916, longitude 109.625575; roughly 75 metres from Trip.com point. Potential provider coordinate-system or within-property differences are not resolved."
+        },
+        {
+          "url": "https://www.argylehotels.com/business/index.html",
+          "kind": "primary_hotel_group",
+          "supports": "Previously checked group property directory identifies the Sanya Yalong Bay resort. Does not supply coordinates used here."
+        },
+        {
+          "url": "https://my.trip.com/hotels/sanya-hotel-detail-14074913/argyle-resort-yalong-bay-sanya/",
+          "kind": "booking_platform",
+          "supports": "Exact original research listing14074913 and No9LongxiRoad identity. Rawmapggcoordinate109.625759,18.235272 corroborates Amap at propertyscale."
+        }
+      ],
+      "displayNote": "Примерное положение отеля по Amap; координаты приведены к системе атласа.",
+      "sourceCoordinates": [
+        109.625575,
+        18.235916
+      ],
+      "tripCoordinates": [
+        109.625759,
+        18.235272
+      ]
+    }
+  },
+  "normalization": {
+    "mapCRS": "WGS84",
+    "method": "Approximate inverse GCJ-02: six residual iterations against the standard forward transform; final results rounded to six decimal places. Coordinate precision is not accuracy.",
+    "algorithmReference": "https://github.com/wandergis/coordtransform/blob/master/index.js",
+    "providerCRSReference": "https://lbs.amap.com/api/javascript-api-v2/guide/abc/basetype",
+    "control": {
+      "name": "Horizon Resort",
+      "tripRaw": [
+        109.641786,
+        18.229881
+      ],
+      "amapRaw": [
+        109.641802,
+        18.229857
+      ],
+      "amapURL": "https://ditu.amap.com/place/B0383004JB",
+      "osm": [
+        109.63799,
+        18.23158
+      ],
+      "tripInverse": [
+        109.637802,
+        18.231697
+      ],
+      "conclusion": "Trip map gg point matches Amap GCJ-02 within about 3m. Inverse-converted point falls about 24m from the OSM property reference; raw point differs by about 440m. This supports the Trip map CRS inference for Coconut."
+    }
+  }
+}

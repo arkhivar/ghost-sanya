@@ -1,0 +1,23 @@
+<div class="stay-comparison-tray" data-comparison-tray hidden aria-label="Выбранное для сравнения">
+    <div class="stay-comparison-selection">
+        <p class="stay-comparison-tray-title">К сравнению <span data-comparison-count>0 / 4</span></p>
+        <div class="stay-comparison-chips" data-comparison-chips></div>
+    </div>
+    <div class="stay-comparison-action">
+        <span data-comparison-hint>Выберите от двух до четырёх вариантов</span>
+        <button type="button" data-comparison-open aria-controls="stay-comparison" aria-expanded="false" disabled>Сравнить выбранные <span aria-hidden="true">↗</span></button>
+    </div>
+</div>
+<section class="stay-comparison" id="stay-comparison" data-comparison-panel aria-labelledby="stay-comparison-title" hidden>
+    <div class="stay-comparison-heading">
+        <div>
+            <p class="eyebrow">РЯДОМ — ЛЕГЧЕ ВЫБРАТЬ</p>
+            <h3 id="stay-comparison-title" tabindex="-1">Сравниваю <em>условия.</em></h3>
+            <p>Характеристики из заметок о жилье. «Не уточнено» означает, что ответа пока нет. Сравниваю цены только вместе с датами и составом гостей.</p>
+        </div>
+        <button type="button" class="stay-comparison-close" data-comparison-close>Свернуть <span aria-hidden="true">↑</span></button>
+    </div>
+    <p class="stay-comparison-status" data-comparison-status role="status" aria-live="polite" aria-atomic="true"></p>
+    <div class="stay-comparison-table-wrap" data-comparison-table></div>
+</section>
+<noscript><p class="small-note">Для интерактивного сравнения нужен JavaScript. Все условия доступны в конце заметок о жилье.</p></noscript>

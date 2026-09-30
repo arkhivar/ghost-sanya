@@ -1,0 +1,67 @@
+[
+  {
+    "filename": "coast-hero.webp",
+    "title": "Yalong Bay panorama",
+    "sourceTitle": "Untitled (500px photo 18531739)",
+    "author": "Joanlamm",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:500px_photo_(18531739).jpeg",
+    "width": 1791,
+    "height": 685,
+    "changes": "Converted to WebP. Display crops, where used, are provided under CC BY-SA 3.0.",
+    "description": "Panoramic view across Yalong Bay from the hills, with turquoise water and green coastline."
+  },
+  {
+    "filename": "sanya-bay.webp",
+    "title": "Sanya Bay from Luhuitou Park",
+    "sourceTitle": "Sanya Bay 三亞湾 - panoramio.jpg",
+    "author": "lienyuan lee",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanya_Bay_%E4%B8%89%E4%BA%9E%E6%B9%BE_-_panoramio.jpg",
+    "width": 1800,
+    "height": 1200,
+    "changes": "Resized to 1800 pixels wide and converted to WebP.",
+    "description": "View facing south from Luhuitou Park, identified in the Commons source as the southeastern part of Sanya Bay."
+  },
+  {
+    "filename": "dadonghai.webp",
+    "title": "Dadonghai beach",
+    "sourceTitle": "Dadonhai beach.jpg",
+    "author": "David Castor",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dadonhai_beach.jpg",
+    "width": 1800,
+    "height": 1105,
+    "changes": "Resized to 1800 pixels wide and converted to WebP.",
+    "description": "Palm-framed beach, sea and parasols at Dadonghai."
+  },
+  {
+    "filename": "yalong-bay.webp",
+    "title": "Yalong Bay sea",
+    "sourceTitle": "Yalong Bay, Sanya, Hainan Island (10098686026).jpg",
+    "author": "Gary Todd",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yalong_Bay,_Sanya,_Hainan_Island_(10098686026).jpg",
+    "width": 1800,
+    "height": 1200,
+    "changes": "Resized to 1800 pixels wide and converted to WebP.",
+    "description": "Turquoise sea and offshore islands in Yalong Bay."
+  },
+  {
+    "filename": "wuzhizhou.webp",
+    "title": "Wuzhizhou Island beach",
+    "sourceTitle": "Wuzhizhou Island - 01.jpg",
+    "author": "Lovelanlan",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wuzhizhou_Island_-_01.jpg",
+    "width": 1800,
+    "height": 1196,
+    "changes": "Resized to 1800 pixels wide and converted to WebP.",
+    "description": "Pale sand, turquoise sea and a waterside pavilion on Wuzhizhou Island."
+  }
+]

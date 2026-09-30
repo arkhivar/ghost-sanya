@@ -13,9 +13,10 @@
         "dev": "rollup -c --environment BUILD:development -w",
         "build": "rollup -c --environment BUILD:production",
         "zip": "pnpm build && bestzip hainan-personal-atlas.zip assets/* partials/* members/* *.hbs package.json",
-        "test": "gscan .",
+        "test": "pnpm test:unit && gscan .",
+        "test:unit": "node --test tests/*.test.mjs",
         "pretest": "pnpm zip",
-        "test:ci": "gscan --fatal --verbose .",
+        "test:ci": "pnpm test:unit && gscan --fatal --verbose .",
         "pretest:ci": "pnpm zip"
     },
     "packageManager": "pnpm@12.7.0",

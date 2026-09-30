@@ -1,0 +1,105 @@
+{
+  "checkedAt": "2026-09-30",
+  "origin": {"name": "Sanya Phoenix International Airport", "code": "SYX", "nameRu": "Аэропорт Санья Феникс"},
+  "method": {
+    "purpose": "Compare an airport transfer with a young child, before choosing a specific address.",
+    "transport": "Private car / taxi, not airport bus; airport formalities and waiting are excluded.",
+    "distanceCaveat": "The official hotels publish access distances, but most do not explicitly identify their measurement as driving rather than straight-line distance. Do not label all four figures verified road distances. Safest display: «расстояние по данным отеля»; for verified routed road distances a routing service / confirmed hotel transfer itinerary is still needed.",
+    "timeCaveat": "Official approximate car times are reference estimates, not live traffic or a guarantee. Different addresses in the same bay can materially change the transfer.",
+    "mapCaveatRu": "Линии показывают направления к бухтам, а не автомобильные маршруты.",
+    "uiCaptionRu": "Ориентиры для поездки на машине. Километры — по данным выбранных отелей; минуты — оценка отеля или туристического бюро. Точный адрес, пробки и ожидание машины изменят время.",
+    "editorialRangeCaveat": "Optional planning windows below add an editorial margin; they are not ranges quoted by the sources. They must be labelled «я закладываю на дорогу», not «по данным источника» or «обычно».",
+    "referenceHotelCaveat": "The hotels are geographic reference points only, not new recommendations for the user's accommodation shortlist."
+  },
+  "destinations": [
+    {
+      "id": "sanya-bay",
+      "nameRu": "Саньявань",
+      "referencePoint": "Pullman Oceanview Sanya Bay Resort & Spa, 158 Sanya Bay Road",
+      "hotelDistanceKm": 10,
+      "distanceTypeExplicitInSource": false,
+      "operatorDrivingMinutes": [10, 15],
+      "tourismBoardDrivingMinutes": 15,
+      "suggestedDisplayTimeRu": "≈ 15 мин",
+      "suggestedPersonalPlanningWindowMinutes": [15, 30],
+      "copyRu": "Я начинаю с самого короткого переезда. Саньявань ближе к аэропорту, но бухта длинная: адрес будущего жилья всё равно проверю отдельно.",
+      "sources": [
+        {"url": "https://all.accor.com/hotel/7126/index.en.shtml", "publisher": "Accor / Pullman", "supports": "Access & transport and FAQ: Sanya Phoenix Intl airport 10 km, 10-minute drive. The site also markets airport access as about 10–15 minutes.", "kind": "hotel operator"},
+        {"url": "https://pullman.accor.com/en/hotels/sanya/7126.html", "publisher": "Pullman", "supports": "Getting here says 15-minute drive from Phoenix International Airport.", "kind": "hotel operator"},
+        {"url": "https://www.visitsanya.com/destination/sanya-bay", "publisher": "Sanya Tourism Board", "supports": "Sanya Bay about 15-minute drive from Phoenix International Airport; closest bay to the airport.", "kind": "official tourism board"}
+      ]
+    },
+    {
+      "id": "dadonghai",
+      "nameRu": "Дадунхай",
+      "referencePoint": "JW Marriott Hotel Sanya Dadonghai Bay, 88 Haiyun Road",
+      "hotelDistanceKm": 19,
+      "distanceTypeExplicitInSource": false,
+      "tourismBoardDrivingMinutes": 35,
+      "suggestedDisplayTimeRu": "≈ 35 мин",
+      "suggestedPersonalPlanningWindowMinutes": [35, 50],
+      "copyRu": "В Дадунхай едем дальше — к городским кафе и прогулкам. На день прилёта я оставлю только дорогу, заселение и спокойный вечер.",
+      "sources": [
+        {"url": "https://www.marriott.com/en-us/hotels/syxdb-jw-marriott-hotel-sanya-dadonghai-bay/overview/", "publisher": "Marriott", "supports": "Getting here / airport FAQ: Sanya Phoenix International Airport 19.0 km from the property.", "kind": "hotel operator"},
+        {"url": "https://www.visitsanya.com/accommodation/jw-marriott-hotel-sanya-dadonghai-bay", "publisher": "Sanya Tourism Board", "supports": "Hotel at 88 Haiyun Road is about 35 minutes by car from Sanya Phoenix International Airport.", "kind": "official tourism board"}
+      ],
+      "crossCheck": {"url": "https://english.sanya.gov.cn/syen/hotels/202502/072b4a20aeb14a4abb92059ddad2d097.shtml", "publisher": "Sanya municipal government", "supports": "Different Dadonghai hotel (Sunshine Resort Intime, 88 Haihua Road) listed as 25-minute drive in a 2025-02-12 article. This illustrates address/source variation, not a contradiction to resolve with a fabricated exact bay time."}
+    },
+    {
+      "id": "yalong-bay",
+      "nameRu": "Ялунвань",
+      "referencePoint": "Sanya Marriott Yalong Bay Resort & Spa, 1 Wan Yue Lu, Yalong Bay",
+      "hotelDistanceKm": 31.9,
+      "distanceTypeExplicitInSource": false,
+      "operatorDrivingMinutes": [30, 30],
+      "tourismBoardDrivingMinutes": 30,
+      "suggestedDisplayDistanceRu": "≈ 32 км",
+      "suggestedDisplayTimeRu": "≈ 30 мин",
+      "suggestedPersonalPlanningWindowMinutes": [40, 55],
+      "copyRu": "К Ялунваню путь длиннее в километрах, но минуты зависят и от дороги. Для нашей семьи я заложу запас и уточню время до конкретного отеля.",
+      "sources": [
+        {"url": "https://www.marriott.com.cn/hotels/syxmc-sanya-marriott-yalong-bay-resort-and-spa/overview/", "publisher": "Marriott China", "supports": "Current Chinese overview explicitly says airport approximately 30 minutes by car (距离三亚凤凰国际机场约30分钟车程); Getting here publishes 31.9 KM. Same property, same official page.", "kind": "hotel operator"},
+        {"url": "https://www.marriott.com/en-us/hotels/syxmc-sanya-marriott-yalong-bay-resort-and-spa/overview/", "publisher": "Marriott", "supports": "English Getting here / FAQ also publishes 31.9 KM to Sanya Phoenix International Airport. Address: 1 Wan Yue Lu, Yalong Bay.", "kind": "hotel operator"},
+        {"url": "https://www.visitsanya.com/destination/yalong-bay", "publisher": "Sanya Tourism Board", "supports": "Getting here: Yalong Bay about 30-minute drive from Sanya Phoenix International Airport.", "kind": "official tourism board"}
+      ],
+      "crossCheck": {"url": "https://www.hilton.com/en/hotels/syxhihi-hilton-sanya-yalong-bay-resort-and-spa/hotel-location/", "publisher": "Hilton", "supports": "Hilton Yalong Bay publishes about 40 km from Phoenix airport. This is a different reference property and should not be silently mixed into an exact route."}
+    },
+    {
+      "id": "haitang-bay",
+      "nameRu": "Хайтанвань",
+      "referencePoint": "JW Marriott Sanya Haitang Bay Resort & Spa, 32 Haitang North Road",
+      "hotelDistanceKm": 49.3,
+      "distanceTypeExplicitInSource": false,
+      "operatorDrivingMinutes": [40, 40],
+      "tourismBoardDrivingMinutes": 40,
+      "suggestedDisplayDistanceRu": "≈ 49 км",
+      "suggestedDisplayTimeRu": "≈ 40 мин",
+      "suggestedPersonalPlanningWindowMinutes": [45, 65],
+      "copyRu": "До Хайтанваня — самый длинный из этих переездов по опубликованному расстоянию. Если выберу эту бухту, встречу и машину организую заранее.",
+      "sources": [
+        {"url": "https://www.marriott.com/en-us/hotels/syxjw-jw-marriott-sanya-haitang-bay-resort-and-spa/overview/", "publisher": "Marriott", "supports": "Overview states 40-minute drive from Sanya Phoenix International Airport. Getting here / FAQ states 49.3 km from airport.", "kind": "hotel operator"},
+        {"url": "https://www.visitsanya.com/destination/haitang-bay", "publisher": "Sanya Tourism Board", "supports": "Getting here: taxi from Sanya Phoenix International Airport to central Haitang Bay about 40 minutes.", "kind": "official tourism board"},
+        {"url": "https://www.shangri-la.com/sanya/shangrilasanya/about/map-directions/", "publisher": "Shangri-La", "supports": "Independent operator cross-check: 40-minute drive / taxi from SYX to Shangri-La Sanya, 88 Haitang North Road.", "kind": "hotel operator"}
+      ]
+    }
+  ],
+  "familyCopy": {
+    "heading": "Прилетели. А до моря далеко?",
+    "intro": "Мы прилетаем прямо в SYX. С маленьким ребёнком я хочу заранее представить этот последний отрезок: сколько ещё ехать, где встретиться с водителем и как добраться без лишней суеты.",
+    "timeClarifier": "Минуты на карте — только поездка в машине. Получение багажа, выход из терминала и ожидание транспорта идут отдельно.",
+    "checklist": [
+      "Заранее подтвердить детское кресло, подходящее ребёнку, и его наличие в назначенной машине.",
+      "Сообщить, что нас четверо взрослых и двое детей; проверить места для всех, коляски и багажа.",
+      "Договориться о точке встречи и запасе на задержку рейса.",
+      "Положить нужные в дороге вещи ребёнка в отдельную сумку под рукой."
+    ],
+    "decision": "Один переезд не решает, где провести целый месяц. Я сопоставлю дорогу из аэропорта с тем, насколько удобной будет наша обычная жизнь в бухте."
+  },
+  "excluded": [
+    "IHG hotels-near-airport search listing uses apparently straight-line proximity; not used as road distance.",
+    "Agoda explicitly labels its map distances straight-line; not used as road distance.",
+    "Rome2Rio gives very optimistic 15-minute Dadonghai taxi time; not used for family planning.",
+    "2016/2018 hotel press releases and unrelated conference decks were not preferred over current official pages.",
+    "No car-seat availability, exact transfer fare, shuttle timetable, or real-time traffic has been verified."
+  ]
+}

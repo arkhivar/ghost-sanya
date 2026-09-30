@@ -4,7 +4,7 @@
             <p class="eyebrow"><span>07 /</span> ВЫБИРАЮ ЖИЛЬЁ</p>
             <h2 id="stay-title">Где<br><em>остановиться.</em></h2>
         </div>
-        <p class="section-intro">Я сравниваю варианты из нашего исследования.<br>Сначала бухта и удобства, потом конкретный адрес.<br>Выбор пока открыт.<br><button type="button" class="stay-map-open" data-open-map data-show-hotels>Посмотреть гостиницы на карте ↗</button></p>
+        <p class="section-intro">Я сравниваю варианты из нашего исследования.<br>Выберите два–четыре места — и посмотрим на дорогу, кухню и условия рядом.<br><button type="button" class="stay-map-open" data-open-map data-show-hotels>Посмотреть гостиницы на карте ↗</button></p>
     </div>
     {{#get "posts" filter="tag:stays" include="tags" limit="100" order="published_at asc,id asc"}}
         {{#if posts}}
@@ -14,7 +14,7 @@
                 <button type="button" data-stay-filter="apartments" aria-pressed="false">Апартаменты</button>
                 <button type="button" data-stay-filter="hotels" aria-pressed="false">Отели</button>
             </div>
-            <button class="stay-saved-filter" type="button" data-stay-saved aria-pressed="false" aria-describedby="stay-save-help">Мой список <span id="saved-count">0</span></button>
+            <button class="stay-saved-filter" type="button" data-stay-saved aria-pressed="false" aria-describedby="stay-save-help">Выбранные <span id="saved-count">0</span></button>
         </div>
         <div class="stay-bay-filter" role="group" aria-label="Бухта">
             <span class="stay-filter-label">Бухта</span>
@@ -26,7 +26,7 @@
         </div>
         <div class="stay-filter-meta">
             <p class="stay-results" role="status" aria-live="polite" aria-atomic="true">Показано: <span data-stay-results>{{posts.length}} из {{posts.length}}</span></p>
-            <p id="stay-save-help">«Мой список» сохраняется только в этом браузере, без регистрации.</p>
+            <p id="stay-save-help">Выбор для сравнения сохраняется в этом браузере, без регистрации.</p>
         </div>
         <div class="stay-list">
             {{#foreach posts}}{{> "stay-row"}}{{/foreach}}
@@ -36,6 +36,7 @@
             <button type="button" data-stay-reset>Сбросить фильтры</button>
         </div>
         <p class="save-notice" aria-live="polite" aria-atomic="true"></p>
+        {{> "stay-comparison"}}
         <p class="small-note">Цены и наличие на наши даты ещё предстоит узнать. Сохранённые варианты не синхронизируются между устройствами; очистка данных сайта удалит список.</p>
         {{else}}
             <p class="stay-catalog-empty">Пока здесь нет вариантов жилья. Добавлю их по мере подготовки к поездке.</p>
