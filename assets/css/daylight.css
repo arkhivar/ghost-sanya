@@ -1,0 +1,745 @@
+/* The atlas in daylight: the author's own blue, with sun and coral accents. */
+:root {
+    --ink: #1a305a;
+    --sea: #b1d8f2;
+    --sea-light: #d8edf9;
+    --paper: #fffcf5;
+    --sand: #a94329;
+    --muted: #536b86;
+    --line: #d6e1e7;
+    --color-primary: #a94329;
+    --color-base: #1a305a;
+    --color-border: #d6e1e7;
+    --color-bg: #fffcf5;
+    --sun: #ffda77;
+    --coral: #ee785b;
+}
+::selection {
+    background: #ffda77;
+    color: var(--ink);
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline-color: #a94329;
+}
+.site-header {
+    color: var(--ink);
+    background: #d4eaf8d9;
+    border-color: #1a305a16;
+}
+.site-header.is-paper,
+.atlas-inner .site-header {
+    background: #fffcf5f2;
+    border-color: var(--line);
+}
+.header-map-link {
+    border-color: #1a305a36;
+    background: #ffffff45;
+}
+.atlas-journey {
+    color: var(--ink);
+}
+.stage-shade {
+    background: linear-gradient(
+        90deg,
+        #b1d8f2 0%,
+        #b1d8f2f5 23%,
+        #b1d8f2b3 36%,
+        #b1d8f200 53%
+    );
+}
+.eyebrow.light,
+.hero-content .eyebrow,
+.map-kicker {
+    color: #3f6182;
+}
+.hero-intro,
+.story-start,
+.travel-dates,
+.story-panel > p:not(.eyebrow),
+.selected-bay > p,
+.bay-detail p,
+.day-timeline p,
+.explore-detail > p {
+    color: #365377;
+}
+.hero-content h1 em {
+    color: #a94329;
+    position: relative;
+}
+.hero-content h1 em::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    width: 94%;
+    height: 8px;
+    border-bottom: 3px solid #ee785b88;
+    border-radius: 50%;
+    transform: rotate(-3deg);
+}
+.round-arrow {
+    border-color: #1a305a40;
+    background: #ffda77;
+}
+.story-start:hover .round-arrow {
+    background: #ffe69e;
+}
+.date-line {
+    background: #49688880;
+}
+.island-note > span {
+    color: #365b80;
+}
+.island-note i,
+.island-note small {
+    color: #466a8b;
+}
+.live-dot {
+    background: #bd5134;
+    box-shadow: 0 0 0 4px #ffda7755;
+}
+.chapter-progress a::before {
+    background: #1a305a50;
+}
+.chapter-progress a.is-active::before {
+    background: #a94329;
+    box-shadow: 0 0 0 5px #ffffff60;
+}
+.story-panel h2 em,
+.section-heading h2 em,
+.closing-note em {
+    color: #a94329;
+}
+.story-panel > p.scene-aside {
+    color: var(--ink);
+    border-color: #a9432966;
+}
+.family-facts {
+    border-color: #1a305a29;
+}
+.family-facts strong {
+    color: var(--ink);
+}
+.family-facts span,
+.selected-bay-top {
+    color: #425c7d;
+}
+.area-tabs button {
+    border-color: #1a305a40;
+    border-radius: 20px;
+    background: #ffffff32;
+}
+.area-tabs button[aria-pressed="true"] {
+    color: #fff;
+    background: var(--ink);
+    border-color: var(--ink);
+}
+.area-tabs button:hover {
+    border-color: var(--ink);
+}
+.selected-bay {
+    border-color: #1a305a35;
+}
+.bay-detail {
+    background: #f5fbff70;
+    border-color: #d16040;
+    border-radius: 0 8px 8px 0;
+}
+.detail-label {
+    color: #994329;
+}
+.text-link.pale {
+    color: var(--ink);
+    border-color: #1a305a65;
+}
+.priority-dock {
+    color: var(--ink);
+    background: #fffdf4f5;
+    border-color: #ffffffc9;
+    box-shadow: 0 8px 30px #1a305a16;
+    border-radius: 18px;
+}
+.dock-label {
+    color: #506786;
+}
+.priority-options button {
+    color: var(--ink);
+    border-radius: 12px;
+}
+.priority-options button:hover {
+    background: #b1d8f255;
+}
+.priority-options button[aria-pressed="true"] {
+    background: var(--sun);
+    color: var(--ink);
+}
+.day-timeline li > div {
+    border-color: #1a305a32;
+}
+.explore-close {
+    background: #fffcf5;
+    border-color: #1a305a30;
+    color: var(--ink);
+}
+.explore-detail {
+    color: var(--ink);
+    background: #fffcf5f5;
+    border-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 15px 45px #1a305a18;
+}
+.paper-priorities button[aria-pressed="true"] {
+    color: var(--ink);
+    background: var(--sun);
+}
+.section-intro,
+.priority-explainer,
+.research-note,
+.small-note,
+.stay-name > p,
+.stay-feature,
+.bay-card-consider {
+    color: #526881;
+}
+.bay-card-image {
+    border-radius: 10px;
+}
+.bay-card-image::after {
+    background: linear-gradient(180deg, #1a305a30, transparent 45%);
+}
+.bay-card {
+    transition: transform 0.25s;
+}
+.haitang-illustration {
+    background: #b1d8f2;
+}
+.haitang-illustration > span:first-of-type,
+.haitang-illustration .illustration-label,
+.wave-art .icon {
+    color: var(--ink);
+}
+.wave-art i {
+    border-color: #1a305a30;
+}
+.research-note {
+    background: #eaf3f6;
+}
+.bay-card:hover {
+    transform: translateY(-5px);
+}
+.bay-card h3,
+.stay-row h3 {
+    color: var(--ink);
+}
+.decision-section {
+    background: #dfedf5;
+    color: var(--ink);
+}
+.decision-intro > p:last-child,
+.decision-checklist small,
+.check-progress {
+    color: #425f7d;
+}
+.decision-checklist label {
+    border-color: #1a305a25;
+}
+.decision-checklist input {
+    accent-color: #1a305a;
+}
+.decision-checklist label:has(input:checked) > span {
+    color: #3e6e68;
+}
+.closing-flower {
+    color: #de6947;
+}
+.site-footer {
+    background: #f0f7fa;
+}
+.site-footer p,
+.footer-links,
+.article-excerpt,
+.article-meta,
+.article-footer,
+.article-feature figcaption {
+    color: #506580;
+}
+.gh-content.article-body {
+    color: #3f5674;
+}
+.gh-content.article-body strong {
+    color: var(--ink);
+}
+.gh-content.article-body a {
+    color: #a94329;
+    text-decoration-color: #d79d8d;
+}
+.wind-stamp {
+    position: absolute;
+    bottom: 19%;
+    right: 43%;
+    width: 95px;
+    height: 95px;
+    border: 1px dashed #a9432977;
+    border-radius: 50%;
+    background: #ffdf86;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transform: rotate(-12deg);
+    color: var(--ink);
+    pointer-events: auto;
+    box-shadow: 5px 7px 0 #1a305a08;
+    transition: transform 0.3s;
+}
+.wind-stamp:hover {
+    transform: rotate(0deg);
+}
+.wind-stamp .icon {
+    width: 35px;
+    height: 35px;
+    stroke-width: 1.2;
+}
+.wind-stamp span {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+/* Arriving becomes part of the geography: three scroll steps, one map. */
+.arrival-panel h2,
+.transfer-panel h2 {
+    font-size: clamp(44px, 4.4vw, 68px);
+}
+.arrival-ticket {
+    margin: 25px 0;
+    background: #fffcf5;
+    border-radius: 14px;
+    padding: 18px 23px;
+    width: 295px;
+    max-width: 100%;
+    box-shadow: 6px 7px 0 #1a305a0a;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+.arrival-ticket > div {
+    display: flex;
+    flex-direction: column;
+}
+.arrival-ticket small {
+    color: #526881;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+}
+.arrival-ticket strong {
+    font-size: 52px;
+    line-height: 1.1;
+    letter-spacing: -0.07em;
+    font-weight: 500;
+}
+.arrival-ticket span {
+    font-size: 11px;
+}
+.arrival-ticket .icon {
+    width: 45px;
+    height: 45px;
+    stroke-width: 1;
+    color: #bc5234;
+}
+.arrival-ticket > p {
+    border-top: 1px dashed #1a305a35;
+    margin-top: 14px;
+    padding-top: 11px;
+    grid-column: 1/-1;
+    font-size: 10px;
+    color: #526881;
+}
+.transfer-cards {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0 17px;
+}
+.transfer-card {
+    text-align: left;
+    border: 1px solid #ffffff90;
+    background: #eff8feaa;
+    border-radius: 12px;
+    padding: 15px 17px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 12px;
+    transition:
+        background 0.25s,
+        border-color 0.25s,
+        transform 0.25s;
+}
+.transfer-card:hover {
+    transform: translateX(3px);
+}
+.transfer-card[aria-pressed="true"] {
+    background: #fffcf5;
+    border-color: #a9432988;
+    box-shadow: 4px 5px 0 #1a305a08;
+}
+.transfer-card .transfer-name {
+    font-size: 15px;
+    font-weight: 600;
+}
+.transfer-card .transfer-minutes {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.05em;
+}
+.transfer-card .transfer-minutes small {
+    font-size: 10px;
+    letter-spacing: 0;
+}
+.transfer-card .transfer-reference {
+    color: #526881;
+    font-size: 10px;
+    margin-top: 4px;
+}
+.transfer-card .transfer-distance {
+    color: #526881;
+    font-size: 10px;
+    text-align: right;
+    margin-top: 4px;
+}
+.transfer-panel > .transfer-footnote {
+    font-size: 10px !important;
+    line-height: 1.65 !important;
+}
+.transfer-footnote a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.transfer-next {
+    font-size: 11px;
+}
+.transfer-key {
+    display: inline-block;
+    padding: 4px 9px;
+    margin-bottom: 3px;
+    border-radius: 30px;
+    background: #ffdf86;
+    color: var(--ink);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+}
+/* A sun-filled editorial pause: a real sail is the main character. */
+.wind-section {
+    background: #fff5db;
+    padding: 95px 6vw 70px;
+    overflow: hidden;
+}
+.wind-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 45px;
+    margin-bottom: 40px;
+}
+.wind-heading h2 {
+    font-size: clamp(52px, 6vw, 90px);
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+    margin-top: 22px;
+}
+.wind-heading h2 em {
+    color: #a94329;
+}
+.wind-heading > p {
+    max-width: 310px;
+    font-size: 13px;
+    color: #526881;
+}
+.wind-layout {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+.wind-art {
+    position: relative;
+}
+.wind-art img {
+    border-radius: 14px 75px 14px 14px;
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+.wind-art figcaption {
+    font-size: 9px;
+    color: #697586;
+    margin-top: 10px;
+}
+.wind-art-tag {
+    position: absolute;
+    top: 20px;
+    left: -13px;
+    background: #ffda77;
+    padding: 9px 18px;
+    transform: rotate(-5deg);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--ink);
+    box-shadow: 3px 3px 0 #1a305a13;
+}
+.wind-notes > .icon {
+    width: 44px;
+    height: 44px;
+    color: #a94329;
+    margin-bottom: 20px;
+}
+.wind-notes h3 {
+    font-size: 39px;
+    line-height: 1.03;
+    letter-spacing: -0.025em;
+    margin-bottom: 19px;
+}
+.wind-notes > p {
+    font-size: 12px;
+    color: #526881;
+    line-height: 1.9;
+}
+.wind-questions {
+    margin: 22px 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: wind;
+}
+.wind-questions li {
+    counter-increment: wind;
+    border-top: 1px solid #1a305a22;
+    padding: 13px 0 13px 32px;
+    font-size: 11px;
+    position: relative;
+}
+.wind-questions li::before {
+    content: "0" counter(wind);
+    color: #a94329;
+    position: absolute;
+    left: 0;
+    font-size: 9px;
+    top: 16px;
+}
+.wind-notes .text-link {
+    font-size: 11px;
+}
+.coast-interlude::after {
+    background:
+        linear-gradient(90deg, #1a305a70, #1a305a00),
+        linear-gradient(0deg, #1a305a35, transparent 40%);
+}
+.coast-caption .eyebrow {
+    color: #fffdf2;
+}
+.transfer-reference-table {
+    overflow-x: auto;
+    max-width: 100%;
+}
+.transfer-reference-table table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 510px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.transfer-reference-table th,
+.transfer-reference-table td {
+    padding: 17px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+}
+.transfer-reference-table th {
+    background: #dceefa;
+    font-weight: 600;
+}
+.transfer-reference-table tbody tr:nth-child(even) {
+    background: #f1f7fa;
+}
+@media (min-width: 761px) and (max-height: 800px) {
+    .arrival-panel h2,
+    .transfer-panel h2 {
+        font-size: 52px;
+        margin: 18px 0;
+    }
+    .arrival-ticket {
+        margin: 18px 0;
+    }
+    .transfer-cards {
+        margin: 18px 0 14px;
+        gap: 9px;
+    }
+    .transfer-card {
+        padding: 12px 16px;
+    }
+    .transfer-panel > p:not(.eyebrow) {
+        margin: 12px 0;
+    }
+}
+@media (max-width: 1000px) and (min-width: 761px) {
+    .wind-stamp {
+        right: 27%;
+        bottom: 17%;
+    }
+    .wind-layout {
+        gap: 30px;
+        grid-template-columns: 1.4fr 1fr;
+    }
+    .transfer-card .transfer-minutes {
+        font-size: 20px;
+    }
+}
+@media (max-width: 760px) {
+    .stage-shade {
+        background: linear-gradient(
+            0deg,
+            #b1d8f2 0%,
+            #b1d8f2f7 39%,
+            #b1d8f200 53%
+        );
+    }
+    .story-panel {
+        background: #b1d8f2;
+        box-shadow:
+            0 -8px 16px #b1d8f2,
+            0 25px 30px #b1d8f2;
+    }
+    .priority-dock {
+        background: #fffcf5;
+        box-shadow: 0 -5px 30px #1a305a12;
+    }
+    .wind-stamp {
+        right: 28px;
+        top: 29%;
+        bottom: auto;
+        width: 67px;
+        height: 67px;
+    }
+    .wind-stamp .icon {
+        width: 26px;
+        height: 26px;
+    }
+    .wind-stamp span {
+        font-size: 6px;
+    }
+    .hero-content h1 em::after {
+        border-bottom-width: 2px;
+    }
+    .arrival-panel h2,
+    .transfer-panel h2 {
+        font-size: 47px;
+    }
+    .arrival-ticket {
+        width: 100%;
+        max-width: 320px;
+    }
+    .scene-transfer {
+        padding-top: 47svh;
+        padding-bottom: 80px;
+        min-height: 115svh;
+    }
+    .transfer-card {
+        padding: 16px;
+    }
+    .transfer-card .transfer-name {
+        font-size: 14px;
+    }
+    .transfer-card .transfer-reference,
+    .transfer-card .transfer-distance {
+        font-size: 10px;
+    }
+    .transfer-panel > .transfer-footnote {
+        font-size: 11px !important;
+    }
+    .atlas-map-transfer-note {
+        top: 42%;
+        font-size: 9px;
+        text-align: center;
+        white-space: normal;
+        line-height: 1.5;
+    }
+    .atlas-map:is([data-scene="arrival"], [data-scene="transfer"])
+        .atlas-map-scale,
+    .atlas-map:is([data-scene="arrival"], [data-scene="transfer"])
+        .atlas-map-attribution {
+        display: none;
+    }
+    .wind-section {
+        padding: 65px 25px 55px;
+    }
+    .wind-heading {
+        display: block;
+        margin-bottom: 28px;
+    }
+    .wind-heading h2 {
+        font-size: 56px;
+    }
+    .wind-heading > p {
+        margin-top: 22px;
+        font-size: 13px;
+    }
+    .wind-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .wind-art img {
+        border-top-right-radius: 32px;
+        aspect-ratio: 3/2;
+    }
+    .wind-art figcaption {
+        font-size: 9px;
+    }
+    .wind-notes h3 {
+        font-size: 38px;
+    }
+    .wind-notes > p,
+    .wind-questions li {
+        font-size: 13px;
+    }
+    .wind-notes .text-link {
+        font-size: 12px;
+    }
+}
+@media (max-width: 360px) {
+    .header-map-link {
+        display: none;
+    }
+    .brand {
+        gap: 6px;
+    }
+    .brand-mark {
+        width: 26px;
+        height: 26px;
+    }
+    .brand > span {
+        font-size: 11px;
+    }
+    .primary-nav {
+        gap: 12px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+    .transfer-card {
+        padding: 12px;
+        column-gap: 7px;
+    }
+    .transfer-card .transfer-name {
+        font-size: 12px;
+    }
+    .transfer-card .transfer-minutes {
+        font-size: 21px;
+    }
+    .transfer-card .transfer-reference {
+        font-size: 9px;
+    }
+    .wind-heading h2 {
+        font-size: 48px;
+    }
+}

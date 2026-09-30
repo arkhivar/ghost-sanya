@@ -1,0 +1,848 @@
+/* Hainan editorial atlas. All classes are scoped to its map component. */
+.atlas-map,
+.atlas-map * {
+    box-sizing: border-box;
+}
+.atlas-map {
+    --atlas-ink: #1a305a;
+    --atlas-paper: #1a305a;
+    --atlas-gold: #e76f51;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    isolation: isolate;
+    color: var(--atlas-paper);
+    background: radial-gradient(
+        ellipse at 78% 28%,
+        #d7edf9 0%,
+        #b1d8f2 47%,
+        #c8e5f6 100%
+    );
+    font-family: var(--font-sans, "Manrope", "Arial", sans-serif);
+}
+.atlas-map::before {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        #d8edf9 0%,
+        rgb(216 237 249 / 97%) 18%,
+        rgb(216 237 249 / 65%) 35%,
+        transparent 52%
+    );
+}
+.atlas-map::after {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+    background: linear-gradient(
+        0deg,
+        rgb(200 229 246 / 55%) 0%,
+        transparent 15%,
+        transparent 87%,
+        rgb(216 237 249 / 20%) 100%
+    );
+}
+.atlas-map-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.atlas-map.is-ready .atlas-map-svg {
+    opacity: 1;
+}
+.atlas-map-grid path {
+    fill: none;
+    stroke: #4778a0;
+    stroke-width: 0.6px;
+    stroke-opacity: 0.14;
+    vector-effect: non-scaling-stroke;
+}
+.atlas-map-context path {
+    fill: #92bda8;
+    fill-opacity: 0.26;
+    stroke: #8bae8c;
+    stroke-opacity: 0.22;
+    stroke-width: 0.8px;
+    vector-effect: non-scaling-stroke;
+}
+.atlas-map-echo {
+    fill: none;
+    stroke: #5cabbd;
+    vector-effect: non-scaling-stroke;
+    stroke-linejoin: round;
+}
+.atlas-map-echo-1 {
+    stroke-width: 13px;
+    stroke-opacity: 0.12;
+}
+.atlas-map-echo-2 {
+    stroke-width: 39px;
+    stroke-opacity: 0.058;
+}
+.atlas-map-echo-3 {
+    stroke-width: 83px;
+    stroke-opacity: 0.035;
+}
+.atlas-map-echo-4 {
+    stroke-width: 147px;
+    stroke-opacity: 0.023;
+}
+.atlas-map-echo-5 {
+    stroke-width: 221px;
+    stroke-opacity: 0.014;
+}
+.atlas-map-land {
+    fill: url(#atlas-land-color);
+    stroke: #fff8dd;
+    stroke-opacity: 0.9;
+    stroke-width: 1.05px;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+    filter: url(#atlas-land-shadow);
+}
+.atlas-map-land-light {
+    fill: url(#atlas-land-light);
+    pointer-events: none;
+}
+.atlas-map-land-grain {
+    fill: url(#atlas-land-dots);
+    pointer-events: none;
+}
+.atlas-map-city-labels,
+.atlas-map-geographic-labels {
+    pointer-events: none;
+    transition: opacity 0.65s ease;
+}
+.atlas-map-city-name {
+    font-size: 13px;
+    font-weight: 450;
+    letter-spacing: 0.4px;
+    fill: #1a305a;
+}
+.atlas-map-city-chinese {
+    font-size: 9px;
+    fill: #1a305a;
+    opacity: 0.49;
+    letter-spacing: 3px;
+}
+.atlas-map-city-point {
+    fill: #fdf7dd;
+    stroke: #1a305a;
+    stroke-width: 1px;
+}
+.atlas-map-city-featured .atlas-map-city-point {
+    fill: #e76f51;
+    stroke: #fff6da;
+    stroke-width: 1px;
+}
+.atlas-map-city-featured .atlas-map-city-name {
+    font-size: 22px;
+    font-weight: 500;
+    fill: #1a305a;
+}
+.atlas-map-city-aura {
+    fill: #e76f51;
+    opacity: 0.13;
+}
+.atlas-map-city-ring {
+    fill: none;
+    stroke: #e76f51;
+    stroke-width: 0.8px;
+    stroke-opacity: 0.6;
+}
+.atlas-map-island-name {
+    transition: opacity 0.6s ease;
+}
+.atlas-map-island-chinese {
+    font-family: serif;
+    font-size: 57px;
+    letter-spacing: 12px;
+    fill: #38604d;
+    opacity: 0.19;
+}
+.atlas-map-island-russian {
+    font-size: 13px;
+    font-weight: 550;
+    letter-spacing: 3px;
+    fill: #1a305a;
+    opacity: 0.92;
+}
+.atlas-map-island-latitude {
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    fill: #1a305a;
+    opacity: 0.55;
+}
+.atlas-map-sea-russian {
+    fill: #396087;
+    opacity: 0.3;
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+.atlas-map-coordinate-labels text {
+    fill: #396087;
+    opacity: 0.33;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+.atlas-map[data-scene="south"] .atlas-map-city-labels,
+.atlas-map[data-scene="bays"] .atlas-map-city-labels,
+.atlas-map[data-scene="daily"] .atlas-map-city-labels,
+.atlas-map[data-scene="homes"] .atlas-map-city-labels,
+.atlas-map[data-scene="arrival"] .atlas-map-city-labels,
+.atlas-map[data-scene="transfer"] .atlas-map-city-labels,
+.atlas-map:not([data-scene="island"]) .atlas-map-island-name {
+    opacity: 0;
+}
+.atlas-map-shore-highlight {
+    fill: none;
+    stroke: var(--atlas-gold);
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+    opacity: 0;
+    transition:
+        opacity 0.4s,
+        stroke-width 0.4s;
+}
+.atlas-map-shore-highlight.is-selected,
+.atlas-map-shore-highlight.is-hovered {
+    opacity: 1;
+    stroke-width: 5px;
+}
+.atlas-map-shore-highlight.is-relevant {
+    opacity: 0.7;
+}
+.atlas-map[data-scene="island"] .atlas-map-shore-highlight {
+    opacity: 0;
+}
+.atlas-map:is([data-scene="arrival"], [data-scene="transfer"])
+    .atlas-map-shore-highlight {
+    opacity: 0;
+}
+.atlas-map-coast-hit {
+    fill: none;
+    stroke: transparent;
+    stroke-width: 26px;
+    vector-effect: non-scaling-stroke;
+    pointer-events: stroke;
+    cursor: pointer;
+}
+.atlas-map[data-scene="island"] .atlas-map-coast-hit {
+    pointer-events: none;
+}
+.atlas-map-place-labels {
+    position: absolute;
+    z-index: 3;
+    inset: 0;
+    pointer-events: none;
+    transition: opacity 0.55s ease;
+}
+.atlas-map[data-scene="island"] .atlas-map-place-labels {
+    opacity: 0;
+    visibility: hidden;
+}
+.atlas-map-marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    pointer-events: auto;
+}
+.atlas-map-area {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: var(--atlas-paper);
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    -webkit-tap-highlight-color: transparent;
+    font: inherit;
+}
+.atlas-map-area-dot {
+    position: absolute;
+    inset: 13px;
+    background: #fff8dc;
+    border: 3px solid var(--atlas-ink);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 1px rgb(255 255 255 / 85%),
+        0 0 0 7px rgb(26 48 90 / 6%);
+    transition:
+        background 0.2s,
+        box-shadow 0.3s,
+        transform 0.3s;
+}
+.atlas-map-area-label {
+    position: absolute;
+    top: calc(20px + var(--label-y));
+    left: calc(20px + var(--label-x));
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 19px auto;
+    grid-template-rows: auto auto;
+    text-align: left;
+    column-gap: 4px;
+    padding: 7px 9px 6px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    min-width: max-content;
+    line-height: 1.1;
+    text-shadow:
+        0 1px 8px rgb(239 248 251 / 80%),
+        0 1px 2px #edf6f8;
+    transition:
+        border-color 0.3s,
+        background 0.3s;
+}
+.atlas-map-area-number {
+    grid-row: 1 / 3;
+    color: #526d85;
+    font-size: 9px;
+    font-weight: 500;
+    align-self: start;
+    padding-top: 2px;
+    letter-spacing: 0.5px;
+}
+.atlas-map-area-name {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05px;
+    white-space: nowrap;
+}
+.atlas-map-area-chinese {
+    display: block;
+    font-size: 9px;
+    color: #496981;
+    margin-top: 6px;
+    letter-spacing: 3px;
+    opacity: 0.65;
+}
+.atlas-map-area-chinese.is-transfer-stat {
+    font-size: 10px;
+    font-weight: 600;
+    color: #3c5879;
+    letter-spacing: 0;
+    opacity: 1;
+    white-space: nowrap;
+}
+.atlas-map-marker-stem {
+    position: absolute;
+    bottom: 9px;
+    left: -0.5px;
+    width: 1px;
+    height: var(--stem-height);
+    transform-origin: center calc(100% + 9px);
+    transform: rotate(var(--stem-rotation));
+    background: linear-gradient(0deg, rgb(26 48 90 / 42%), rgb(26 48 90 / 16%));
+    pointer-events: none;
+}
+.atlas-map-area:focus {
+    outline: none;
+}
+.atlas-map-area:focus-visible .atlas-map-area-label {
+    outline: 2px solid var(--atlas-gold);
+    outline-offset: 3px;
+}
+.atlas-map-marker.is-selected .atlas-map-area-dot,
+.atlas-map-marker.is-hovered .atlas-map-area-dot,
+.atlas-map-marker.is-relevant .atlas-map-area-dot {
+    background: #e76f51;
+    box-shadow:
+        0 0 0 1px #e76f51,
+        0 0 0 9px rgb(231 111 81 / 14%),
+        0 0 23px rgb(231 111 81 / 12%);
+}
+.atlas-map-marker.is-selected .atlas-map-area-label,
+.atlas-map-marker.is-hovered .atlas-map-area-label {
+    color: #1a305a;
+    border-color: rgb(26 48 90 / 13%);
+    background: rgb(255 251 236 / 94%);
+}
+.atlas-map-marker.is-relevant .atlas-map-area-name {
+    color: #ac4936;
+}
+.atlas-map.has-map-priority
+    .atlas-map-marker:not(.is-relevant):not(.is-selected):not(.is-hovered)
+    .atlas-map-area-label {
+    opacity: 0.58;
+}
+.atlas-map[data-priority="windsurf"] .atlas-map-marker .atlas-map-area-label {
+    opacity: 1;
+}
+.atlas-map-hovercard {
+    position: absolute;
+    z-index: 5;
+    width: 260px;
+    padding: 21px 23px 18px;
+    border: 1px solid rgb(26 48 90 / 12%);
+    border-radius: 3px;
+    color: #1a305a;
+    background: rgb(255 253 244 / 98%);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 15px 40px rgb(26 48 90 / 12%);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(7px);
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease;
+}
+.atlas-map-hovercard[hidden] {
+    display: none;
+}
+.atlas-map-hovercard.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.atlas-map-hovercard-kicker {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    color: #a54535;
+    margin-bottom: 12px;
+}
+.atlas-map-hovercard-kicker b {
+    font-weight: 500;
+}
+.atlas-map-hovercard strong {
+    font-family: var(--font-serif, Georgia, serif);
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.05;
+}
+.atlas-map-hovercard p {
+    margin: 10px 0 17px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #49607a;
+}
+.atlas-map-hovercard-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgb(26 48 90 / 14%);
+    padding-top: 12px;
+    font-size: 10px;
+    color: #a54535;
+}
+.atlas-map-hovercard-action span {
+    font-size: 17px;
+    line-height: 1;
+}
+.atlas-map-compass {
+    position: absolute;
+    z-index: 2;
+    right: 46px;
+    top: 124px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #1a305a;
+    opacity: 0.7;
+    pointer-events: none;
+}
+.atlas-map-compass > span {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+.atlas-map-compass svg {
+    width: 21px;
+    height: 40px;
+    overflow: visible;
+}
+.atlas-map-compass path {
+    fill: #1a305a;
+}
+.atlas-map-compass path.atlas-map-compass-tail {
+    stroke: #1a305a;
+    stroke-width: 0.7px;
+    fill: none;
+}
+.atlas-map-scale {
+    position: absolute;
+    z-index: 2;
+    right: 44px;
+    bottom: 102px;
+    color: #1a305a;
+    opacity: 0.7;
+    pointer-events: none;
+    text-align: right;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+.atlas-map-scale span {
+    display: block;
+    margin-bottom: 7px;
+}
+.atlas-map-scale i {
+    display: block;
+    height: 5px;
+    border: 1px solid #1a305a;
+    border-top: 0;
+    min-width: 35px;
+}
+.atlas-map-attribution {
+    position: absolute;
+    z-index: 2;
+    bottom: 77px;
+    right: 43px;
+    color: #1a305a;
+    opacity: 0.48;
+    font-size: 8px;
+    letter-spacing: 0.3px;
+}
+.atlas-map-attribution a {
+    color: inherit;
+    text-decoration: none;
+}
+.atlas-map-attribution a:hover,
+.atlas-map-attribution a:focus-visible {
+    text-decoration: underline;
+    opacity: 1;
+}
+.atlas-map[data-scene="island"] .atlas-map-attribution span {
+    display: none;
+}
+
+/* An airport pin and schematic directions belong to the arrival chapter only. */
+.atlas-map-transfer-routes,
+.atlas-map-airport,
+.atlas-map-transfer-note {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s;
+}
+.atlas-map:is([data-scene="arrival"], [data-scene="transfer"])
+    .atlas-map-transfer-routes,
+.atlas-map:is([data-scene="arrival"], [data-scene="transfer"])
+    .atlas-map-airport,
+.atlas-map:is([data-scene="arrival"], [data-scene="transfer"])
+    .atlas-map-transfer-note {
+    opacity: 1;
+    visibility: visible;
+}
+.atlas-map-transfer-route,
+.atlas-map-transfer-accent {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+.atlas-map-transfer-route {
+    stroke: #1a305a;
+    stroke-width: 1.5px;
+    stroke-opacity: 0.4;
+    stroke-dasharray: 3 6;
+    transition: stroke-opacity 0.4s;
+}
+.atlas-map-transfer-route.is-active {
+    stroke-opacity: 0.08;
+}
+.atlas-map-transfer-accent {
+    stroke: #c74f39;
+    stroke-width: 2.8px;
+    stroke-dasharray: 2 2.4;
+    opacity: 0;
+    transition: opacity 0.45s;
+}
+.atlas-map-transfer-accent.is-active {
+    opacity: 1;
+    animation: atlas-transfer-flow 18s linear infinite;
+}
+@keyframes atlas-transfer-flow {
+    to {
+        stroke-dashoffset: -100;
+    }
+}
+.atlas-map-airport {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    color: #1a305a;
+}
+.atlas-map-airport-point {
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    background: #1a305a;
+    border: 2px solid #fff9dc;
+    border-radius: 2px;
+    box-shadow: 0 0 0 5px rgb(26 48 90 / 10%);
+    transform: rotate(45deg);
+}
+.atlas-map-airport-label {
+    position: absolute;
+    left: -28px;
+    bottom: 27px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border: 1px solid rgb(26 48 90 / 14%);
+    border-radius: 9px;
+    background: #fff9dc;
+    box-shadow: 0 3px 12px rgb(26 48 90 / 5%);
+    transform: rotate(-4deg);
+}
+.atlas-map-airport-label::after {
+    position: absolute;
+    bottom: -19px;
+    left: 32px;
+    width: 1px;
+    height: 18px;
+    content: "";
+    background: rgb(26 48 90 / 35%);
+}
+.atlas-map-airport-label svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    transform: rotate(25deg);
+}
+.atlas-map-airport-label b {
+    display: block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+.atlas-map-airport-label small {
+    display: block;
+    margin-top: 5px;
+    font-size: 9px;
+    white-space: nowrap;
+}
+.atlas-map-transfer-note {
+    position: absolute;
+    z-index: 3;
+    left: 52%;
+    bottom: 157px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: rgb(238 249 254 / 82%);
+    color: #3f5c7b;
+    font-size: 10px;
+    letter-spacing: 0.1px;
+}
+.atlas-map:is([data-scene="arrival"], [data-scene="transfer"])
+    .atlas-map-sea-name {
+    opacity: 0.2;
+}
+
+@media (min-width: 1600px) {
+    .atlas-map-city-name {
+        font-size: 14px;
+    }
+    .atlas-map-city-featured .atlas-map-city-name {
+        font-size: 24px;
+    }
+    .atlas-map-island-chinese {
+        font-size: 68px;
+    }
+    .atlas-map-island-russian {
+        font-size: 14px;
+    }
+    .atlas-map-area-name {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1050px) and (min-width: 760px) {
+    .atlas-map-city-name {
+        font-size: 11px;
+    }
+    .atlas-map-city-featured .atlas-map-city-name {
+        font-size: 19px;
+    }
+    .atlas-map-area-name {
+        font-size: 12px;
+    }
+    .atlas-map-area-label {
+        grid-template-columns: 15px auto;
+        column-gap: 1px;
+        padding: 5px;
+    }
+    .atlas-map-area-number {
+        font-size: 8px;
+    }
+    .atlas-map-compass {
+        right: 26px;
+    }
+}
+@media (max-width: 759px) {
+    .atlas-map::before {
+        background: linear-gradient(
+            0deg,
+            #c8e5f6 10%,
+            rgb(200 229 246 / 96%) 29%,
+            rgb(200 229 246 / 70%) 40%,
+            transparent 60%
+        );
+    }
+    .atlas-map::after {
+        background: linear-gradient(
+            180deg,
+            rgb(216 237 249 / 35%),
+            transparent 12%,
+            transparent 85%,
+            #c8e5f6
+        );
+    }
+    .atlas-map-compass {
+        right: 22px;
+        top: 140px;
+        gap: 6px;
+        opacity: 0.5;
+    }
+    .atlas-map-compass svg {
+        height: 27px;
+        width: 15px;
+    }
+    .atlas-map-compass > span {
+        font-size: 8px;
+    }
+    .atlas-map-city-name {
+        font-size: 9px;
+    }
+    .atlas-map-city-chinese {
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+    .atlas-map-city-featured .atlas-map-city-name {
+        font-size: 15px;
+    }
+    .atlas-map-island-chinese {
+        font-size: 35px;
+        letter-spacing: 6px;
+    }
+    .atlas-map-island-russian {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+    }
+    .atlas-map-island-latitude {
+        display: none;
+    }
+    .atlas-map-sea-russian {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+    .atlas-map-scale {
+        right: 22px;
+        top: 46%;
+        bottom: auto;
+        font-size: 8px;
+        opacity: 0.45;
+    }
+    .atlas-map-attribution {
+        right: 22px;
+        top: 50%;
+        bottom: auto;
+        font-size: 7px;
+        opacity: 0.4;
+    }
+    .atlas-map:not([data-scene="island"]) .atlas-map-scale {
+        top: 52%;
+    }
+    .atlas-map:not([data-scene="island"]) .atlas-map-attribution {
+        top: 57%;
+    }
+    .atlas-map-area-name {
+        font-size: 10px;
+        letter-spacing: 0;
+    }
+    .atlas-map-area-number {
+        font-size: 7px;
+        padding-top: 1px;
+    }
+    .atlas-map-area-label {
+        grid-template-columns: 13px auto;
+        gap: 0;
+        padding: 6px 4px;
+    }
+    .atlas-map-area-chinese {
+        font-size: 7px;
+        letter-spacing: 2px;
+        margin-top: 4px;
+    }
+    .atlas-map-area-chinese.is-transfer-stat {
+        font-size: 8px;
+        letter-spacing: 0;
+    }
+    .atlas-map-hovercard {
+        width: 228px;
+        padding: 15px 18px;
+    }
+    .atlas-map-hovercard strong {
+        font-size: 22px;
+    }
+    .atlas-map-hovercard p {
+        font-size: 11px;
+    }
+    .atlas-map-airport-label {
+        left: -24px;
+        bottom: 23px;
+        gap: 6px;
+        padding: 7px 9px;
+        border-radius: 7px;
+    }
+    .atlas-map-airport-label b {
+        font-size: 15px;
+    }
+    .atlas-map-airport-label small {
+        font-size: 8px;
+        margin-top: 4px;
+    }
+    .atlas-map-airport-label svg {
+        width: 18px;
+        height: 18px;
+    }
+    .atlas-map-airport-label::after {
+        left: 27px;
+    }
+    .atlas-map-transfer-note {
+        left: 50%;
+        top: 46%;
+        bottom: auto;
+        width: max-content;
+        max-width: calc(100% - 32px);
+        transform: translateX(-50%);
+        padding: 6px 9px;
+        font-size: 8px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .atlas-map *,
+    .atlas-map *::before,
+    .atlas-map *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

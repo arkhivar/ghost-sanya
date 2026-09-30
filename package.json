@@ -1,7 +1,6 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A starter theme for Ghost theme development",
-    "demo": "https://starter.ghost.io",
+    "name": "hainan-personal-atlas",
+    "description": "A Russian scrollytelling atlas for a family month on Hainan",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=5.0.0"
@@ -13,7 +12,7 @@
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",
         "build": "rollup -c --environment BUILD:production",
-        "zip": "pnpm build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
+        "zip": "pnpm build && bestzip hainan-personal-atlas.zip assets/* partials/* members/* *.hbs package.json",
         "test": "gscan .",
         "pretest": "pnpm zip",
         "test:ci": "gscan --fatal --verbose .",
@@ -39,9 +38,9 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/arkhivar/ghost-sanya.git"
     },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
+    "bugs": "https://github.com/arkhivar/ghost-sanya/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
         "@babel/core": "8.0.6",

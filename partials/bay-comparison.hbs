@@ -1,0 +1,92 @@
+<section class="paper-section compare-section" id="compare" aria-labelledby="compare-title">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow"><span>06 /</span> ВЫБИРАЮ СВОЙ РИТМ</p>
+            <h2 id="compare-title">Сначала бухта.<br><em>Потом адрес.</em></h2>
+        </div>
+        <p class="section-intro">Идеальное место для всех я не ищу.<br>Хочу понять, какой компромисс нам подходит.<br>Выберите, что сейчас важнее.</p>
+    </div>
+    <div class="compare-controls">
+        <div class="paper-priorities priority-options" role="group" aria-label="Приоритет для сравнения бухт">
+            <button type="button" data-priority="default" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-sun" /></svg>Всё вместе</button>
+            <button type="button" data-priority="baby" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-baby" /></svg>С малышом</button>
+            <button type="button" data-priority="kitchen" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-kitchen" /></svg>С кухней</button>
+            <button type="button" data-priority="parents" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-chair" /></svg>Комфорт родителей</button>
+            <button type="button" data-priority="windsurf" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-sail" /></svg>Виндсёрфинг</button>
+        </div>
+        <p class="priority-explainer" id="priority-explainer" aria-live="polite">Четыре отправные точки. У каждой — свои сильные стороны и вопросы к конкретному жилью.</p>
+    </div>
+    <ol class="bay-list" role="list" aria-label="Сравнение четырёх бухт">
+        <li class="bay-row" data-bay-row="sanya-bay" aria-labelledby="compare-sanya-title">
+            <figure class="bay-row-visual">
+                <a class="bay-row-image" href="/sanya-bay/" aria-label="Открыть описание Саньяваня">
+                    <img src="{{asset 'images/sanya-bay.webp'}}" alt="Городское побережье Саньяваня" width="900" height="600" loading="lazy">
+                    <span>01 / 三亚湾</span>
+                </a>
+                <figcaption><a href="/about-atlas/#photos">Фото: lienyuan lee · CC BY 3.0</a></figcaption>
+            </figure>
+            <div class="bay-row-main">
+                <p class="eyebrow">ГОРОД И ПОВСЕДНЕВНАЯ ЖИЗНЬ</p>
+                <h3 id="compare-sanya-title"><a href="/sanya-bay/">Саньявань <span aria-hidden="true">↗</span></a></h3>
+                <div class="bay-row-response">
+                    <p data-bay-copy>Длинное побережье, городская жизнь и варианты апартаментов. Здесь решает конкретный адрес.</p>
+                    <p class="bay-row-consider"><svg class="icon" aria-hidden="true"><use href="#i-compass" /></svg><span data-bay-consider>Смотреть: пеший путь до моря и магазинов.</span></p>
+                </div>
+            </div>
+            {{> "bay-notes" tagSlug="sanya-bay" tagName="Саньявань"}}
+        </li>
+        <li class="bay-row" data-bay-row="dadonghai" aria-labelledby="compare-dadonghai-title">
+            <figure class="bay-row-visual">
+                <a class="bay-row-image" href="/dadonghai/" aria-label="Открыть описание Дадунхая">
+                    <img src="{{asset 'images/dadonghai.webp'}}" alt="Пляж и пальмы у бухты Дадунхай" width="900" height="553" loading="lazy">
+                    <span>02 / 大东海</span>
+                </a>
+            </figure>
+            <div class="bay-row-main">
+                <p class="eyebrow">МОРЕ В ГОРОДСКОМ РИТМЕ</p>
+                <h3 id="compare-dadonghai-title"><a href="/dadonghai/">Дадунхай <span aria-hidden="true">↗</span></a></h3>
+                <div class="bay-row-response">
+                    <p data-bay-copy>Пляж, кафе и повседневные дела в одной части города. Присматриваюсь к жизни без лишних поездок.</p>
+                    <p class="bay-row-consider"><svg class="icon" aria-hidden="true"><use href="#i-compass" /></svg><span data-bay-consider>Смотреть: шум и состояние конкретного дома.</span></p>
+                </div>
+            </div>
+            {{> "bay-notes" tagSlug="dadonghai" tagName="Дадунхай"}}
+        </li>
+        <li class="bay-row" data-bay-row="yalong-bay" aria-labelledby="compare-yalong-title">
+            <figure class="bay-row-visual">
+                <a class="bay-row-image" href="/yalong-bay/" aria-label="Открыть описание Ялунваня">
+                    <img src="{{asset 'images/yalong-bay.webp'}}" alt="Море и острова Ялунваня" width="900" height="600" loading="lazy">
+                    <span>03 / 亚龙湾</span>
+                </a>
+            </figure>
+            <div class="bay-row-main">
+                <p class="eyebrow">ПЛЯЖ И КУРОРТНЫЙ КОМФОРТ</p>
+                <h3 id="compare-yalong-title"><a href="/yalong-bay/">Ялунвань <span aria-hidden="true">↗</span></a></h3>
+                <div class="bay-row-response">
+                    <p data-bay-copy>Бухта, которую рассматриваю ради моря и отдыха на территории отеля. Быт здесь стоит продумать отдельно.</p>
+                    <p class="bay-row-consider"><svg class="icon" aria-hidden="true"><use href="#i-compass" /></svg><span data-bay-consider>Смотреть: кухня и стоимость всей конфигурации.</span></p>
+                </div>
+            </div>
+            {{> "bay-notes" tagSlug="yalong-bay" tagName="Ялунвань"}}
+        </li>
+        <li class="bay-row" data-bay-row="haitang-bay" aria-labelledby="compare-haitang-title">
+            <figure class="bay-row-visual">
+                <a class="bay-row-image bay-row-illustration" href="/haitang-bay/" aria-label="Открыть описание Хайтанваня">
+                    <span>04 / 海棠湾</span>
+                    <div class="wave-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><svg class="icon"><use href="#i-sail" /></svg></div>
+                    <small>ОТКРЫТОЕ МОРЕ</small>
+                </a>
+            </figure>
+            <div class="bay-row-main">
+                <p class="eyebrow">ПРОСТОР И БОЛЬШИЕ КУРОРТЫ</p>
+                <h3 id="compare-haitang-title"><a href="/haitang-bay/">Хайтанвань <span aria-hidden="true">↗</span></a></h3>
+                <div class="bay-row-response">
+                    <p data-bay-copy>Крупные курорты и отдельный мир внутри отеля. Важная точка сравнения для понимания всего побережья.</p>
+                    <p class="bay-row-consider"><svg class="icon" aria-hidden="true"><use href="#i-compass" /></svg><span data-bay-consider>Смотреть: условия купания, расстояния и транспорт.</span></p>
+                </div>
+            </div>
+            {{> "bay-notes" tagSlug="haitang-bay" tagName="Хайтанвань"}}
+        </li>
+    </ol>
+    <div class="research-note"><svg class="icon" aria-hidden="true"><use href="#i-compass" /></svg><p>Это ориентиры для выбора, а не рейтинг. Условия моря зависят от дня; кухня, детская инфраструктура и сервис — от конкретного объекта.</p></div>
+</section>

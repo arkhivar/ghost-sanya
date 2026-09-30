@@ -1,0 +1,19 @@
+<aside class="bay-notes" aria-label="Заметки: {{tagName}}">
+    {{#get "posts" filter="tag:{{tagSlug}}" limit="3" order="published_at desc,id desc"}}
+        <p class="bay-notes-count">Всего заметок: <strong>{{pagination.total}}</strong></p>
+        {{#if posts}}
+            <p class="bay-notes-heading">Последние заметки</p>
+            <ul class="bay-notes-list">
+                {{#foreach posts}}
+                    <li><a href="{{url}}">{{title}}</a></li>
+                {{/foreach}}
+            </ul>
+        {{else}}
+            <p class="bay-notes-empty">Здесь пока нет заметок. Буду добавлять их по мере подготовки к поездке.</p>
+        {{/if}}
+    {{else}}
+        <p class="bay-notes-count">Заметки по бухте</p>
+        <p class="bay-notes-empty">Не удалось загрузить список. Можно попробовать открыть все заметки.</p>
+    {{/get}}
+    <a class="bay-notes-all" href="{{@site.url}}/tag/{{tagSlug}}/" aria-label="Смотреть все заметки с тегом {{tagName}}">Смотреть все заметки <span aria-hidden="true">↗</span></a>
+</aside>

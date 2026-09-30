@@ -1,0 +1,246 @@
+{{!< default}}
+{{> "hotel-data"}}
+<div class="atlas-journey" id="story">
+    <div class="atlas-stage" aria-label="Интерактивная карта Хайнаня">
+        <div id="atlas-map"></div><div
+            class="stage-shade"
+            aria-hidden="true"
+        ></div>
+        <div class="map-kicker"><span class="live-dot"></span><span
+                id="map-kicker-text"
+            >20° С. Ш. / 110° В. Д.</span></div>
+        <div class="atlas-layer-controls" hidden>
+            <span>СЛОИ КАРТЫ</span>
+            <button type="button" data-hotels-toggle aria-pressed="false" aria-label="Показать гостиницы на карте"><svg class="icon" aria-hidden="true"><use href="#i-home" /></svg>Гостиницы <span class="layer-toggle-dot" aria-hidden="true"></span></button>
+            <small>Наведите курсор на метку — откроется запись.</small>
+        </div>
+        <div class="chapter-progress" aria-label="Главы истории">
+            <a href="#island" data-chapter="island" aria-label="Глава 1. Остров" class="is-active"><span>01</span></a>
+            <a href="#south" data-chapter="south" aria-label="Глава 2. Наши пожелания"><span>02</span></a>
+            <a href="#arrival" data-chapter="arrival" aria-label="Глава 3. Прилёт и дорога к морю"><span>03</span></a>
+            <a href="#bays" data-chapter="bays" aria-label="Глава 4. Четыре бухты"><span>04</span></a>
+            <a href="#everyday" data-chapter="daily" aria-label="Глава 5. Обычный день"><span>05</span></a>
+        </div>
+        <div class="priority-dock" id="priority-dock" hidden><span
+                class="dock-label"
+            >Что важнее сейчас?</span><div
+                class="priority-options"
+                role="group"
+                aria-label="Приоритет при выборе района"
+            >
+                <button
+                    type="button"
+                    data-priority="default"
+                    aria-pressed="true"
+                ><svg class="icon"><use href="#i-sun" /></svg><span>Всё вместе</span></button>
+                <button
+                    type="button"
+                    data-priority="baby"
+                    aria-pressed="false"
+                ><svg class="icon"><use href="#i-baby" /></svg><span>С малышом</span></button>
+                <button
+                    type="button"
+                    data-priority="kitchen"
+                    aria-pressed="false"
+                ><svg class="icon"><use href="#i-kitchen" /></svg><span>С кухней</span></button>
+                <button
+                    type="button"
+                    data-priority="parents"
+                    aria-pressed="false"
+                ><svg class="icon"><use href="#i-chair" /></svg><span
+                    >Комфорт</span></button>
+                <button
+                    type="button"
+                    data-priority="windsurf"
+                    aria-pressed="false"
+                ><svg class="icon"><use href="#i-sail" /></svg><span
+                    >Виндсёрфинг</span></button>
+            </div></div><button class="explore-close" type="button" hidden><svg
+                class="icon"
+            ><use href="#i-close" /></svg>К истории</button>
+    </div>
+    <section
+        class="story-scene scene-island"
+        id="island"
+        data-scene="island"
+        aria-labelledby="hero-title"
+    ><div class="scene-content hero-content"><p class="eyebrow light">ОДИН
+                ОСТРОВ. ШЕСТЕРО НАС. ПОЧТИ МЕСЯЦ.</p><h1
+                id="hero-title"
+            >Хайнань.<br />Месяц<br /> <em>у моря.</em></h1><p
+                class="hero-intro"
+            >Билеты уже куплены. Осталось понять,<br class="desktop-br" />
+                где начнётся наша маленькая жизнь<br class="desktop-br" />
+                на большом острове.</p><a
+                class="story-start"
+                href="#south"
+            ><span class="round-arrow"><svg class="icon"><use
+                            href="#i-down"
+                        /></svg></span><span>Листайте — будем выбирать вместе</span></a><div
+                class="travel-dates"
+            ><span>29 ДЕК 2026</span><span class="date-line"></span><span>26 ЯНВ
+                    2027</span></div></div><div class="island-note"><span>海 南</span><i
+            >Южнее моря</i><small>Остров, с которого начинается история</small></div>
+            <a class="wind-stamp" href="#wind" aria-label="К главе про виндсёрфинг"><svg class="icon" aria-hidden="true"><use href="#i-sail" /></svg><span>Планы на ветер</span></a>
+        </section>
+    <section
+        class="story-scene"
+        id="south"
+        data-scene="south"
+        aria-labelledby="south-title"
+    ><div class="scene-content story-panel"><p class="eyebrow light"><span>01 /</span>
+                ОТ ОСТРОВА К НАШЕЙ ПОЕЗДКЕ</p><h2
+                id="south-title"
+            >Представляю<br />нашу жизнь<br /><em>у моря.</em></h2><p>Я еду с
+                женой, детьми — одному год, другому десять — и родителями жены.
+                Почти месяц вместе, у моря.</p><p>Мне важна кухня. Жене —
+                удобство с малышом и возможность покататься под парусом.
+                Родителям — комфорт. А старшему ребёнку нужны свои открытия.</p><div
+                class="family-facts"
+            ><div><strong>6</strong><span>путешественников</span></div><div
+                ><strong>€5 000</strong><span>предел на жильё</span></div></div><p
+                class="scene-aside"
+            >Мы пока не знаем даже, какую бухту выбрать.<br />Поэтому начнём с
+                побережья.</p><a class="text-link pale" href="#arrival">Сначала — прилетаем
+                <svg class="icon"><use
+                        href="#i-arrow"
+                    /></svg></a></div></section>
+    {{> "arrival"}}
+    <section
+        class="story-scene scene-bays"
+        id="bays"
+        data-scene="bays"
+        aria-labelledby="bays-title"
+    ><div class="scene-content story-panel bay-panel"><p
+                class="eyebrow light"
+            ><span>03 /</span> У КАЖДОЙ БУХТЫ СВОЙ РИТМ</p><h2
+                id="bays-title"
+            >Одна Санья.<br /><em>Разная жизнь.</em></h2><p
+                class="bay-instruction"
+            >Выберите бухту на карте или ниже. Затем поменяйте приоритет — и
+                посмотрите на неё по-новому.</p><div
+                class="area-tabs"
+                role="group"
+                aria-label="Выбрать бухту"
+            ><button
+                    type="button"
+                    data-area="sanya-bay"
+                    aria-pressed="true"
+                >Саньявань</button><button
+                    type="button"
+                    data-area="dadonghai"
+                    aria-pressed="false"
+                >Дадунхай</button><button
+                    type="button"
+                    data-area="yalong-bay"
+                    aria-pressed="false"
+                >Ялунвань</button><button
+                    type="button"
+                    data-area="haitang-bay"
+                    aria-pressed="false"
+                >Хайтанвань</button></div><article
+                class="selected-bay"
+                aria-live="polite"
+                aria-atomic="true"
+            ><div class="selected-bay-top"><span
+                        class="bay-number"
+                        id="bay-number"
+                    >01</span><span id="bay-tagline">ГОРОД И ДЛИННОЕ ПОБЕРЕЖЬЕ</span></div><h3
+                    id="bay-name"
+                >Саньявань</h3><p id="bay-description">Начну с повседневной
+                    жизни: апартаменты, городские дела и длинное побережье.
+                    Здесь особенно важно выбрать конкретный участок.</p><div
+                    class="bay-detail"
+                ><span class="detail-label" id="bay-detail-label">МОЙ ОРИЕНТИР</span><p
+                        id="bay-detail"
+                    >Проверять адрес, а не только название бухты: магазины, пляж
+                        и возможный спот могут оказаться далеко друг от друга.</p></div><a
+                    id="bay-link"
+                    class="text-link pale"
+                    href="/sanya-bay/"
+                >Разобраться в бухте
+                    <svg class="icon"><use
+                            href="#i-arrow"
+                        /></svg></a></article><button
+                class="free-explore text-link pale"
+                type="button"
+            ><svg class="icon"><use href="#i-compass" /></svg>Развернуть карту</button></div></section>
+    <section
+        class="story-scene"
+        id="everyday"
+        data-scene="daily"
+        aria-labelledby="day-title"
+    ><div class="scene-content story-panel everyday-panel"><p
+                class="eyebrow light"
+            ><span>04 /</span> ПРИМЕРЯЮ МЕСТО К НАШЕЙ ЖИЗНИ</p><h2
+                id="day-title"
+            >А что будет<br /><em>во вторник?</em></h2><p>Красивый пляж легко
+                представить. Я пробую представить обычный день — без экскурсий и
+                особых планов.</p><ol class="day-timeline"><li><span
+                    >08:00</span><div><strong>Завтрак дома</strong><p>Есть ли на
+                            кухне всё, чтобы готовить каждый день?</p></div></li><li
+                ><span>10:00</span><div><strong>Море и прогулка</strong><p
+                        >Удобно ли дойти с коляской, где тень и переходы?</p></div></li><li
+                ><span>14:00</span><div><strong>У каждого своё время</strong><p
+                        >Малышу — сон, старшему — занятие, родителям — отдых.</p></div></li><li
+                ><span>16:00</span><div><strong>Если будет ветер</strong><p>Есть
+                            ли настоящий прокат доски с парусом и как туда
+                            добраться?</p></div></li></ol><a
+                class="text-link pale"
+                href="#wind"
+            >И немного времени для ветра
+                <svg class="icon"><use
+                        href="#i-arrow"
+                    /></svg></a></div></section>
+    <noscript><p class="no-script-note">Интерактивная карта работает с
+            JavaScript. Описания бухт, сравнение и все публикации доступны ниже.</p></noscript>
+</div>
+{{> "windsurf"}}
+<section class="coast-interlude" aria-label="Побережье Ялунваня"><img
+        src="{{asset 'images/coast-hero.webp'}}"
+        alt="Побережье и зелёные холмы Ялунваня на Хайнане"
+        width="1791"
+        height="685"
+        loading="lazy"
+    /><div class="coast-caption"><span class="eyebrow light">МЕСТО ДЛЯ НАШЕГО
+            ОБЫЧНОГО СЧАСТЬЯ</span><p>Море рядом.<br /><em>Время вместе.</em></p></div><a
+        class="photo-source"
+        href="/about-atlas/#photos"
+    >Ялунвань · Joanlamm / CC BY-SA 3.0 ↗</a></section>
+{{> "january"}}
+{{> "bay-comparison"}}
+{{> "stays"}}
+<section class="decision-section" id="next"><div class="decision-intro"><p
+            class="eyebrow light"
+        ><span>08 /</span> СЛЕДУЮЩИЙ ШАГ</p><h2>Чуть понятнее.<br /><em>Чуть
+                ближе.</em></h2><p>Мне достаточно двух подходящих бухт и
+            нескольких адресов. Дальше — конкретные вопросы, на которые карта
+            уже не ответит.</p></div><div class="decision-checklist"><p
+            class="eyebrow light"
+        >ЧТО Я УЗНАЮ ПЕРЕД БРОНИРОВАНИЕМ</p><label><input
+                type="checkbox"
+                data-check="kitchen"
+            /><span>Можно ли готовить каждый день?<small>Плита, посуда,
+                    холодильник — в нашем номере.</small></span></label><label
+        ><input type="checkbox" data-check="walk" /><span>Как выглядит путь до
+                пляжа?<small>Реальная прогулка с коляской, переходы и тень.</small></span></label><label
+        ><input type="checkbox" data-check="rooms" /><span>Как разместятся все
+                шестеро?<small>Вместе или рядом, с удобством для родителей.</small></span></label><label
+        ><input type="checkbox" data-check="windsurf" /><span>Есть ли именно
+                виндсёрфинг?<small>Доска, мачта, гик и парус. Самостоятельная
+                    аренда.</small></span></label><label><input
+                type="checkbox"
+                data-check="price"
+            /><span>Какова полная стоимость?<small>Наши даты, все гости, сборы и
+                    условия отмены.</small></span></label><p
+            class="check-progress"
+            aria-live="polite"
+        ><span id="check-count">0</span>
+            из 5 вопросов прояснены</p></div></section>
+<section class="closing-note"><span
+        class="closing-flower"
+        aria-hidden="true"
+    >✳</span><p>Пока мы выбираем место.<br />А путешествие
+        <em>уже начинается.</em></p><a class="text-link" href="#bays">Вернуться
+        к карте
+        <svg class="icon"><use href="#i-arrow" /></svg></a></section>

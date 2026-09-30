@@ -1,46 +1,29 @@
 {{!< default}}
 
-<div class="gh-page">
-    <div class="gh-container">
+<section class="archive-section">
+    <header class="article-header">
+        <a class="article-back text-link" href="/">← Вернуться к истории</a>
+        <p class="eyebrow">Личный путеводитель</p>
+        <h1>От первого лица</h1>
+        <p class="archive-description article-excerpt">Я выбираю место для нашего месяца на Хайнане. Делюсь тем, что уже удалось выяснить, и сохраняю вопросы, которые помогут выбрать осознанно.</p>
+    </header>
 
-        {{#author}}
-        <header class="gh-page-head">
-            {{#if profile_image}}
-                <img class="gh-author-image" src="{{profile_image}}" alt="{{name}}" />
-            {{/if}}
-
-            <h1>{{name}}</h1>
-            {{#if bio}}
-                <p>{{bio}}</p>
-            {{/if}}
-
-            <div class="gh-author-meta">
-                <div class="gh-author-links">
-                    {{#if website}}
-                        <a href="{{website}}" target="_blank" rel="noopener">Website</a>
-                    {{/if}}
-                    {{#if twitter}}
-                        <a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a>
-                    {{/if}}
-                    {{#if facebook}}
-                        <a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a>
-                    {{/if}}
-                </div>
-            </div>
-
-            {{#if cover_image}}
-                <img class="gh-page-image" src="{{cover_image}}" alt="{{name}}" />
-            {{/if}}
-        </header>
-        {{/author}}
-
-        <div class="gh-postfeed">
+    <div class="archive-grid">
         {{#foreach posts}}
-
-            {{> "card"}} {{!-- partials/card.hbs --}}
-
+            {{> "card"}}
+        {{else}}
+            <p class="archive-description">Первые заметки ещё впереди. <a href="/">Начать с острова →</a></p>
         {{/foreach}}
-        </div>
-
     </div>
-</div>
+
+{{#if pagination}}
+    {{#with pagination}}
+    <nav class="archive-pagination" aria-label="Страницы публикаций">
+        {{#if prev}}<a class="text-link" href="{{page_url prev}}" rel="prev">← Предыдущие</a>{{/if}}
+        <span>Страница {{page}} из {{pages}}</span>
+        {{#if next}}<a class="text-link" href="{{page_url next}}" rel="next">Следующие →</a>{{/if}}
+    </nav>
+    {{/with}}
+{{/if}}
+
+</section>

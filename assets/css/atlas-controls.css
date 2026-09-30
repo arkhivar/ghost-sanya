@@ -1,0 +1,21 @@
+.atlas-layer-controls { position: absolute; right: 6vw; top: 162px; z-index: 9; display: flex; align-items: center; gap: 12px; color: var(--ink); }
+.atlas-layer-controls > span { font-size: 8px; letter-spacing: .13em; color: #4c6986; }
+.atlas-layer-controls > small { display: none; }
+.atlas-layer-controls button { display: flex; align-items: center; gap: 9px; background: #fffdf4f5; border: 1px solid #1a305a24; border-radius: 22px; padding: 10px 16px; font-size: 11px; box-shadow: 0 3px 10px #1a305a06; }
+.atlas-layer-controls .icon { width: 18px; height: 18px; }
+.layer-toggle-dot { width: 22px; height: 13px; border-radius: 10px; background: #d7e3ea; position: relative; transition: background .2s; }
+.layer-toggle-dot::before { content: ""; position: absolute; top: 3px; left: 3px; width: 7px; height: 7px; background: white; border-radius: 50%; transition: transform .2s; }
+[data-hotels-toggle][aria-pressed="true"] { background: #ffda77; border-color: #e9c467; }
+[data-hotels-toggle][aria-pressed="true"] .layer-toggle-dot { background: #1a305a; }
+[data-hotels-toggle][aria-pressed="true"] .layer-toggle-dot::before { transform: translateX(9px); }
+.stay-map-open { margin-top: 22px; font-size: 11px; background: #e0eff9; padding: 10px 16px; border: 1px solid #bad5e8; border-radius: 22px; }
+.stay-map-open:hover { background: #b1d8f2; }
+.atlas-hotels-note { color: #667991; font-size: 10px; margin-top: 13px; }
+@media (min-width: 1024px) and (max-width: 1250px) {
+    .atlas-hotel-card-visual { height: 90px; }
+    .atlas-hotel-card-placeholder { padding: 14px 17px 28px; gap: 11px; }
+    .atlas-hotel-card-placeholder > span { max-width: none; font-size: 18px; }
+    .atlas-hotel-card-placeholder svg { width: 32px; height: 32px; }
+    .atlas-hotel-card-copy { padding: 15px 17px 13px; }
+    .atlas-hotel-card h3 { font-size: 24px; }
+}

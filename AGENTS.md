@@ -23,3 +23,9 @@ Run the test command before opening a PR when theme files, generated assets, dep
 - Keep generated assets/built/ files in sync when source assets change and the repo tracks those outputs.
 - Do not commit node_modules/, local Ghost content, generated zip files outside tracked release expectations, or secrets.
 - Repo settings, descriptions, and branch rules belong on the GitHub repository; internal clean-repos metadata stays in TryGhost/cleanrepos.
+
+## Project workflow
+
+- This atlas is maintained in `arkhivar/ghost-sanya`; `upstream` is the original TryGhost/Starter.
+- The owner requests a push immediately after every local commit. Check the push succeeded before starting another commit; never force-push by default.
+- Keep real credentials, Ghost databases, user/member exports, and local backups out of Git.

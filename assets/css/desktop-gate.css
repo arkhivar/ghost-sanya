@@ -1,0 +1,20 @@
+.desktop-gate { display: none; }
+@media (max-width: 1023px), (hover: none) and (pointer: coarse) {
+    html { scroll-behavior: auto; }
+    body { overflow: hidden !important; }
+    body > :not(.desktop-gate):not(script):not(style) { display: none !important; }
+    .desktop-gate { position: fixed; inset: 0; z-index: 2147483000; display: grid; place-items: center; padding: 28px 25px; overflow-y: auto; background: radial-gradient(ellipse at 65% 20%, #d7edf9, #b1d8f2 80%); color: #1a305a; }
+    .desktop-gate-card { text-align: center; max-width: 440px; width: 100%; margin: auto; }
+    .desktop-gate-label { font-size: 9px; font-weight: 600; letter-spacing: .18em; }
+    .desktop-gate-art { width: min(230px, 62vw); margin: 27px auto 14px; }
+    .desktop-gate .eyebrow { font-size: 9px; letter-spacing: .14em; color: #456382; }
+    .desktop-gate h1 { font-size: clamp(36px, 8vw, 52px); line-height: 1; letter-spacing: -.035em; margin: 19px 0; }
+    .desktop-gate h1 em { color: #a94329; }
+    .desktop-gate h1 + p { font-size: 13px; line-height: 1.8; color: #365377; max-width: 365px; margin: 0 auto 28px; }
+    .desktop-gate label { display: block; font-size: 8px; letter-spacing: .16em; margin-bottom: 9px; color: #456382; }
+    .desktop-gate-copy { display: flex; gap: 0; background: #fffdf3; border: 1px solid #1a305a20; border-radius: 12px; padding: 6px; }
+    .desktop-gate input { width: 100%; min-width: 0; background: transparent; border: 0; font-size: 11px; color: #1a305a; padding: 9px 10px; text-overflow: ellipsis; }
+    .desktop-gate button { background: #ffda77; border-radius: 8px; padding: 10px 12px; font-size: 10px; color: #1a305a; font-weight: 600; }
+    .desktop-gate .desktop-gate-status { font-size: 11px; min-height: 25px; margin-top: 8px; color: #365377; }
+    .desktop-gate-foot { display: block; margin-top: 18px; font-family: var(--font-serif); font-style: italic; font-size: 19px; color: #456382; }
+}

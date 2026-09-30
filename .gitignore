@@ -22,3 +22,13 @@ projectFilesBackup
 .DS_Store
 
 dist/
+
+# Local Ghost data, credentials and temporary exports are never theme assets.
+.env
+.env.*
+!.env.example
+*.db
+*.db-journal
+*.sqlite*
+backups/
+.local/

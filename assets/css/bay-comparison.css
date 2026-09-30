@@ -1,0 +1,149 @@
+/* A reading list: priorities change the explanations, Ghost supplies the notes. */
+.compare-controls {
+    position: sticky;
+    top: 95px;
+    z-index: 12;
+    background: var(--paper);
+}
+.compare-controls .paper-priorities {
+    border-bottom: 0;
+    padding: 15px 0 8px;
+}
+.compare-controls .priority-explainer {
+    min-height: 50px;
+    padding: 8px 0 16px;
+    margin: 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 12px;
+    line-height: 1.7;
+}
+.bay-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.bay-row {
+    display: grid;
+    grid-template-columns: 152px minmax(0, 1fr) 280px;
+    gap: 30px;
+    align-items: start;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 222px;
+}
+.bay-row-visual { min-width: 0; }
+.bay-row-image {
+    display: block;
+    position: relative;
+    height: 155px;
+    overflow: hidden;
+    border-radius: 9px;
+    background: var(--sea);
+}
+.bay-row-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #1a305a50, transparent 45%);
+    pointer-events: none;
+}
+.bay-row-image img { width: 100%; height: 100%; object-fit: cover; }
+.bay-row-image > span {
+    position: absolute;
+    z-index: 1;
+    top: 12px;
+    left: 13px;
+    color: #fffdf4;
+    font-size: 9px;
+    letter-spacing: .08em;
+}
+.bay-row-visual figcaption {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 8px;
+    line-height: 1.5;
+}
+.bay-row-visual figcaption a:hover { text-decoration: underline; }
+.bay-row-illustration::after { display: none; }
+.bay-row-illustration > span { color: var(--ink); }
+.bay-row-illustration .wave-art .icon { width: 35px; height: 35px; }
+.bay-row-illustration > small {
+    position: absolute;
+    bottom: 12px;
+    left: 13px;
+    font-size: 8px;
+    letter-spacing: .09em;
+}
+.bay-row-main { min-width: 0; }
+.bay-row-main > .eyebrow { font-size: 8px; letter-spacing: .1em; color: #5d7188; }
+.bay-row-main h3 {
+    font-size: clamp(32px, 2.8vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -.025em;
+    margin: 7px 0 14px;
+}
+.bay-row-main h3 span {
+    display: inline-block;
+    margin-left: 9px;
+    font-family: var(--font-sans-serif);
+    font-size: 17px;
+    vertical-align: middle;
+    color: #8094a9;
+}
+.bay-row-main h3 a:hover { color: #a94329; }
+.bay-row-response [data-bay-copy] {
+    min-height: 73px;
+    color: #405977;
+    font-size: 13px;
+    line-height: 1.85;
+}
+.bay-row-consider {
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+    min-height: 42px;
+    margin-top: 10px;
+    color: #9d5338;
+    font-size: 11px;
+    line-height: 1.8;
+}
+.bay-row-consider .icon { width: 16px; height: 16px; flex: 0 0 16px; margin-top: 3px; }
+.bay-notes {
+    border-left: 1px solid var(--line);
+    padding-left: 25px;
+    min-width: 0;
+}
+.bay-notes-count { font-size: 11px; font-weight: 650; color: var(--ink); }
+.bay-notes-count strong { font-weight: 650; }
+.bay-notes-heading { margin-top: 9px; color: #738399; font-size: 9px; letter-spacing: .035em; }
+.bay-notes-list { list-style: none; padding: 0; margin: 7px 0 14px; }
+.bay-notes-list li + li { margin-top: 8px; }
+.bay-notes-list a { display: block; font-size: 11px; line-height: 1.65; color: #49617c; }
+.bay-notes-list a:hover { color: #a94329; text-decoration: underline; text-underline-offset: 3px; }
+.bay-notes-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 11px;
+    border: 1px solid #bed6e7;
+    border-radius: 5px;
+    color: var(--ink);
+    background: #e7f1f8;
+    font-size: 10px;
+    line-height: 1.6;
+}
+.bay-notes-all:hover { background: #d1e6f5; border-color: #9abfd8; }
+.bay-notes-empty { margin: 12px 0 16px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+@media (min-width: 1024px) and (max-width: 1150px) {
+    .bay-row { grid-template-columns: 116px minmax(0, 1fr) 226px; gap: 22px; }
+    .bay-row-image { height: 140px; }
+    .bay-notes { padding-left: 20px; }
+    .bay-row-response [data-bay-copy] { min-height: 97px; }
+}
+@media (min-width: 1500px) {
+    .bay-row { grid-template-columns: 180px minmax(0, 1fr) 315px; gap: 36px; }
+    .bay-row-image { height: 170px; }
+    .bay-row-response [data-bay-copy] { font-size: 14px; min-height: 78px; }
+    .bay-row-consider, .bay-notes-list a { font-size: 12px; }
+    .bay-notes-count { font-size: 12px; }
+}
